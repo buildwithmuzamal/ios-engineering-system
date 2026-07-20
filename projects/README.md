@@ -4,6 +4,6 @@
 
 - 🏠 [Home](../README.md)
 - 🧠 [Learning Journey](../roadmap/README.md)
-- 🛠️ [Projects](../projects/README.md)
+- 📚 [Notes](../notes/README.md)
 - 📄 [Templates](../templates/README.md)
-- 📖 [Resources](../resources/README.md)
+- 💡 [Ideas](../ideas/README.md)
