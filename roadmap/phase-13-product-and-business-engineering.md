@@ -1,12 +1,12 @@
-# Phase 10 — Production Engineering
+# Phase 13 — Product & Business Engineering
 
-> **Purpose:** Learn everything required to build, ship, monitor, > maintain, and continuously improve production-quality iOS > applications.
+> **Purpose:** Transform your engineering skills into successful products by learning product thinking, business fundamentals, and long-term product management. This phase is about building products people want, shipping them professionally, and continuously improving them.
 
 ---
 
 # Goal
 
-Develop the skills needed to take an application from development to a reliable production release.
+Become an independent Product Engineer capable of identifying real problems, building valuable solutions, shipping them to users, and growing sustainable software products.
 
 ---
 
@@ -14,22 +14,27 @@ Develop the skills needed to take an application from development to a reliable 
 
 By the end of this phase you should be able to:
 
-- Prepare applications for App Store release.
-- Automate builds and releases.
-- Monitor crashes and performance.
-- Use analytics to guide product decisions.
-- Maintain applications after launch.
+- Discover and validate product ideas.
+- Design and build MVPs.
+- Ship production-ready applications.
+- Measure user behavior with analytics.
+- Improve products using real user feedback.
+- Understand product strategy and business fundamentals.
+- Build a sustainable portfolio and personal brand.
 
 ---
 
-# Module 1 — Production Mindset
+# Module 1 — Product Thinking
 
 ## Core Topics
 
-- Development vs Production
-- Release lifecycle
-- Reliability
-- Maintainability
+- Product Thinking
+- Problem Discovery
+- User Research
+- Customer Pain Points
+- Value Proposition
+- Product-Market Fit
+- MVP Mindset
 
 ---
 
@@ -37,10 +42,12 @@ By the end of this phase you should be able to:
 
 After completing this module you should be able to:
 
-- Understand Development vs Production and recognize when it is the right tool.
-- Understand Release lifecycle and recognize when it is the right tool.
-- Understand Reliability and recognize when it is the right tool.
-- Understand Maintainability and recognize when it is the right tool.
+- Understand Product Thinking and recognize when it is the right tool.
+- Understand Problem Discovery and recognize when it is the right tool.
+- Understand User Research and recognize when it is the right tool.
+- Understand Customer Pain Points and recognize when it is the right tool.
+- Understand Value Proposition and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
 - Apply the module concepts in the mini project without copying a full solution.
 - Use official documentation as the primary reference for this module.
 
@@ -50,34 +57,34 @@ After completing this module you should be able to:
 
 ### Git
 
-- Tag releases and annotate production builds.
-- Use release branches responsibly.
-- Keep CI config changes reviewable.
+- Organize product milestones with Git tags.
+- Version releases for App Store builds.
+- Keep product docs and code history aligned.
 
 ### Xcode
 
-- Navigator
+- Code completion
 - Quick Help
-- Breakpoints
-- Documentation viewer
+- Fix-It
+- Build and run
 
 ### Apple Documentation
 
-- Official docs related to Development vs Production, Release lifecycle, Reliability, Maintainability
+- The Swift Programming Language — chapters for this module
 
 ### WWDC
 
-- Only sessions that directly strengthen this module
+- Swift language sessions only when they strengthen this module
 
 ### Best Practices
 
-- Prefer clarity when working with Development vs Production.
+- Prefer clarity when working with Product Thinking.
 - Keep responsibilities small and names meaningful.
 - Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-- What problem does Development vs Production solve?
+- What problem does Product Thinking solve?
 - What would a simpler alternative look like?
 - What trade-offs appear if this is overused?
 
@@ -89,29 +96,29 @@ After completing this module you should be able to:
 
 ### Open Source
 
-- Find a small open-source example related to Development vs Production
+- Read a small Swift package focused on these language features
 
 ### AI
 
-- Ask AI to explain Development vs Production after you attempt it yourself.
+- Ask AI to explain Product Thinking after you attempt it yourself.
 - Request a review of your design, not a full generated solution.
 - Challenge AI suggestions against Apple documentation.
 
 ### English
 
-- Write a short explanation of Development vs Production in your own words.
+- Write a short explanation of Product Thinking in your own words.
 - Use precise terminology in notes and commit messages.
 - Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-- Document Development vs Production, Release lifecycle, Reliability, Maintainability.
+- Document Product Thinking, Problem Discovery, User Research, Customer Pain Points.
 - Capture common mistakes and Apple recommendations.
 - Link related modules and future spiral topics.
 
 ### Reflection
 
-- Can I teach Development vs Production to another engineer?
+- Can I teach Product Thinking to another engineer?
 - What is still unclear?
 - How does this connect to previous phases?
 
@@ -119,7 +126,7 @@ After completing this module you should be able to:
 
 ## Mini Project
 
-- Build a small focused exercise that proves you understand Development vs Production.
+- Build a small focused exercise that proves you understand Product Thinking.
 - Keep the scope small enough to finish, but realistic enough to reuse later.
 - Document one design decision and one mistake you corrected.
 
@@ -129,10 +136,10 @@ After completing this module you should be able to:
 
 You should be able to:
 
-- Use Development vs Production correctly in a realistic scenario and explain the trade-offs.
-- Use Release lifecycle correctly in a realistic scenario and explain the trade-offs.
-- Use Reliability correctly in a realistic scenario and explain the trade-offs.
-- Use Maintainability correctly in a realistic scenario and explain the trade-offs.
+- Use Product Thinking correctly in a realistic scenario and explain the trade-offs.
+- Use Problem Discovery correctly in a realistic scenario and explain the trade-offs.
+- Use User Research correctly in a realistic scenario and explain the trade-offs.
+- Use Customer Pain Points correctly in a realistic scenario and explain the trade-offs.
 - Finish the mini project and describe one design decision you made.
 - Write permanent notes covering the core topics, mistakes, and Apple guidance.
 - Meet every Learning Objective for this module.
@@ -140,15 +147,16 @@ You should be able to:
 
 ---
 
-# Module 2 — Build & Release
+# Module 2 — MVP Planning
 
 ## Core Topics
 
-- Archive
-- Signing
-- Provisioning Profiles
-- TestFlight
-- App Store Connect
+- MVP
+- Feature Prioritization
+- Scope Management
+- Product Roadmaps
+- User Stories
+- Success Metrics
 
 ---
 
@@ -156,11 +164,12 @@ You should be able to:
 
 After completing this module you should be able to:
 
-- Understand Archive and recognize when it is the right tool.
-- Understand Signing and recognize when it is the right tool.
-- Understand Provisioning Profiles and recognize when it is the right tool.
-- Understand TestFlight and recognize when it is the right tool.
-- Understand App Store Connect and recognize when it is the right tool.
+- Understand MVP and recognize when it is the right tool.
+- Understand Feature Prioritization and recognize when it is the right tool.
+- Understand Scope Management and recognize when it is the right tool.
+- Understand Product Roadmaps and recognize when it is the right tool.
+- Understand User Stories and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
 - Apply the module concepts in the mini project without copying a full solution.
 - Use official documentation as the primary reference for this module.
 
@@ -170,9 +179,132 @@ After completing this module you should be able to:
 
 ### Git
 
-- Tag releases and annotate production builds.
-- Use release branches responsibly.
-- Keep CI config changes reviewable.
+- Organize product milestones with Git tags.
+- Version releases for App Store builds.
+- Keep product docs and code history aligned.
+
+### Xcode
+
+- Navigator
+- Quick Help
+- Breakpoints
+- Documentation viewer
+
+### Apple Documentation
+
+- Official docs related to MVP, Feature Prioritization, Scope Management, Product Roadmaps
+
+### WWDC
+
+- Only sessions that directly strengthen this module
+
+### Best Practices
+
+- Prefer clarity when working with MVP.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does MVP solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Find a small open-source example related to MVP
+
+### AI
+
+- Ask AI to explain MVP after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of MVP in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document MVP, Feature Prioritization, Scope Management, Product Roadmaps.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach MVP to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Build a small focused exercise that proves you understand MVP.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use MVP correctly in a realistic scenario and explain the trade-offs.
+- Use Feature Prioritization correctly in a realistic scenario and explain the trade-offs.
+- Use Scope Management correctly in a realistic scenario and explain the trade-offs.
+- Use Product Roadmaps correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 3 — Shipping to the App Store
+
+## Core Topics
+
+- App Store Connect
+- TestFlight
+- Metadata
+- Screenshots
+- Privacy Labels
+- Review Process
+- Versioning
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand App Store Connect and recognize when it is the right tool.
+- Understand TestFlight and recognize when it is the right tool.
+- Understand Metadata and recognize when it is the right tool.
+- Understand Screenshots and recognize when it is the right tool.
+- Understand Privacy Labels and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Organize product milestones with Git tags.
+- Version releases for App Store builds.
+- Keep product docs and code history aligned.
 
 ### Xcode
 
@@ -193,13 +325,13 @@ After completing this module you should be able to:
 
 ### Best Practices
 
-- Prefer clarity when working with Archive.
+- Prefer clarity when working with App Store Connect.
 - Keep responsibilities small and names meaningful.
 - Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-- What problem does Archive solve?
+- What problem does App Store Connect solve?
 - What would a simpler alternative look like?
 - What trade-offs appear if this is overused?
 
@@ -215,25 +347,25 @@ After completing this module you should be able to:
 
 ### AI
 
-- Ask AI to explain Archive after you attempt it yourself.
+- Ask AI to explain App Store Connect after you attempt it yourself.
 - Request a review of your design, not a full generated solution.
 - Challenge AI suggestions against Apple documentation.
 
 ### English
 
-- Write a short explanation of Archive in your own words.
+- Write a short explanation of App Store Connect in your own words.
 - Use precise terminology in notes and commit messages.
 - Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-- Document Archive, Signing, Provisioning Profiles, TestFlight.
+- Document App Store Connect, TestFlight, Metadata, Screenshots.
 - Capture common mistakes and Apple recommendations.
 - Link related modules and future spiral topics.
 
 ### Reflection
 
-- Can I teach Archive to another engineer?
+- Can I teach App Store Connect to another engineer?
 - What is still unclear?
 - How does this connect to previous phases?
 
@@ -241,7 +373,7 @@ After completing this module you should be able to:
 
 ## Mini Project
 
-- Internal TestFlight release.
+- Build a small focused exercise that proves you understand App Store Connect.
 - Keep the scope small enough to finish, but realistic enough to reuse later.
 - Document one design decision and one mistake you corrected.
 
@@ -251,10 +383,10 @@ After completing this module you should be able to:
 
 You should be able to:
 
-- Use Archive correctly in a realistic scenario and explain the trade-offs.
-- Use Signing correctly in a realistic scenario and explain the trade-offs.
-- Use Provisioning Profiles correctly in a realistic scenario and explain the trade-offs.
+- Use App Store Connect correctly in a realistic scenario and explain the trade-offs.
 - Use TestFlight correctly in a realistic scenario and explain the trade-offs.
+- Use Metadata correctly in a realistic scenario and explain the trade-offs.
+- Use Screenshots correctly in a realistic scenario and explain the trade-offs.
 - Finish the mini project and describe one design decision you made.
 - Write permanent notes covering the core topics, mistakes, and Apple guidance.
 - Meet every Learning Objective for this module.
@@ -262,127 +394,7 @@ You should be able to:
 
 ---
 
-# Module 3 — CI/CD
-
-## Core Topics
-
-- Continuous Integration
-- Continuous Delivery
-- GitHub Actions
-- Xcode Cloud (concept)
-- Fastlane (overview)
-
----
-
-## Learning Objectives
-
-After completing this module you should be able to:
-
-- Understand Continuous Integration and recognize when it is the right tool.
-- Understand Continuous Delivery and recognize when it is the right tool.
-- Understand GitHub Actions and recognize when it is the right tool.
-- Understand Xcode Cloud (concept) and recognize when it is the right tool.
-- Understand Fastlane (overview) and recognize when it is the right tool.
-- Apply the module concepts in the mini project without copying a full solution.
-- Use official documentation as the primary reference for this module.
-
----
-
-## Parallel Learning Layers
-
-### Git
-
-- Tag releases and annotate production builds.
-- Use release branches responsibly.
-- Keep CI config changes reviewable.
-
-### Xcode
-
-- Canvas
-- Preview
-- Live Preview
-- View Debugger
-
-### Apple Documentation
-
-- SwiftUI documentation for: Continuous Integration, Continuous Delivery, GitHub Actions, Xcode Cloud (concept)
-
-### WWDC
-
-- SwiftUI sessions matching this module
-
-### Best Practices
-
-- Prefer clarity when working with Continuous Integration.
-- Keep responsibilities small and names meaningful.
-- Validate understanding with a working example before moving on.
-
-### Design Thinking
-
-- What problem does Continuous Integration solve?
-- What would a simpler alternative look like?
-- What trade-offs appear if this is overused?
-
-### Architecture Thinking
-
-- Where does this concept belong in a production app?
-- What should stay out of the UI layer?
-- How would this decision affect testing and change later?
-
-### Open Source
-
-- Study view structure in a small SwiftUI open-source app
-
-### AI
-
-- Ask AI to explain Continuous Integration after you attempt it yourself.
-- Request a review of your design, not a full generated solution.
-- Challenge AI suggestions against Apple documentation.
-
-### English
-
-- Write a short explanation of Continuous Integration in your own words.
-- Use precise terminology in notes and commit messages.
-- Practice explaining trade-offs as you would in a pull request.
-
-### Notes
-
-- Document Continuous Integration, Continuous Delivery, GitHub Actions, Xcode Cloud (concept).
-- Capture common mistakes and Apple recommendations.
-- Link related modules and future spiral topics.
-
-### Reflection
-
-- Can I teach Continuous Integration to another engineer?
-- What is still unclear?
-- How does this connect to previous phases?
-
----
-
-## Mini Project
-
-- Build a simple CI pipeline.
-- Keep the scope small enough to finish, but realistic enough to reuse later.
-- Document one design decision and one mistake you corrected.
-
----
-
-## Exit Criteria
-
-You should be able to:
-
-- Use Continuous Integration correctly in a realistic scenario and explain the trade-offs.
-- Use Continuous Delivery correctly in a realistic scenario and explain the trade-offs.
-- Use GitHub Actions correctly in a realistic scenario and explain the trade-offs.
-- Use Xcode Cloud (concept) correctly in a realistic scenario and explain the trade-offs.
-- Finish the mini project and describe one design decision you made.
-- Write permanent notes covering the core topics, mistakes, and Apple guidance.
-- Meet every Learning Objective for this module.
-
-
----
-
-# Module 4 — Analytics
+# Module 4 — Analytics & User Feedback
 
 ## Core Topics
 
@@ -390,7 +402,9 @@ You should be able to:
 - Events
 - Funnels
 - Retention
-- Privacy considerations
+- User Feedback
+- Reviews
+- Crash Reports
 
 ---
 
@@ -402,7 +416,8 @@ After completing this module you should be able to:
 - Understand Events and recognize when it is the right tool.
 - Understand Funnels and recognize when it is the right tool.
 - Understand Retention and recognize when it is the right tool.
-- Understand Privacy considerations and recognize when it is the right tool.
+- Understand User Feedback and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
 - Apply the module concepts in the mini project without copying a full solution.
 - Use official documentation as the primary reference for this module.
 
@@ -412,25 +427,26 @@ After completing this module you should be able to:
 
 ### Git
 
-- Tag releases and annotate production builds.
-- Use release branches responsibly.
-- Keep CI config changes reviewable.
+- Organize product milestones with Git tags.
+- Version releases for App Store builds.
+- Keep product docs and code history aligned.
 
 ### Xcode
 
-- Keychain debugging caution
-- Scheme environment variables
-- Console redaction habits
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
 
 ### Apple Documentation
 
-- Security overview
-- Keychain Services
-- App Privacy details
+- Instruments Help
+- Debugging with Xcode
 
 ### WWDC
 
-- Security and privacy sessions relevant to the module
+- Instruments sessions
+- SwiftUI performance sessions when relevant
 
 ### Best Practices
 
@@ -452,7 +468,7 @@ After completing this module you should be able to:
 
 ### Open Source
 
-- Study how an open-source app stores credentials
+- Read a performance-related pull request
 
 ### AI
 
@@ -482,7 +498,7 @@ After completing this module you should be able to:
 
 ## Mini Project
 
-- Define analytics for an app.
+- Build a small focused exercise that proves you understand Product Analytics.
 - Keep the scope small enough to finish, but realistic enough to reuse later.
 - Document one design decision and one mistake you corrected.
 
@@ -503,14 +519,17 @@ You should be able to:
 
 ---
 
-# Module 5 — Crash Reporting & Logging
+# Module 5 — Monetization
 
 ## Core Topics
 
-- Crash Reports
-- Logging
-- Monitoring
-- Diagnostics
+- Paid Apps
+- Freemium
+- Subscriptions
+- In-App Purchases
+- Pricing
+- Lifetime Value
+- Customer Acquisition Cost (Introduction)
 
 ---
 
@@ -518,10 +537,12 @@ You should be able to:
 
 After completing this module you should be able to:
 
-- Understand Crash Reports and recognize when it is the right tool.
-- Understand Logging and recognize when it is the right tool.
-- Understand Monitoring and recognize when it is the right tool.
-- Understand Diagnostics and recognize when it is the right tool.
+- Understand Paid Apps and recognize when it is the right tool.
+- Understand Freemium and recognize when it is the right tool.
+- Understand Subscriptions and recognize when it is the right tool.
+- Understand In-App Purchases and recognize when it is the right tool.
+- Understand Pricing and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
 - Apply the module concepts in the mini project without copying a full solution.
 - Use official documentation as the primary reference for this module.
 
@@ -531,251 +552,9 @@ After completing this module you should be able to:
 
 ### Git
 
-- Tag releases and annotate production builds.
-- Use release branches responsibly.
-- Keep CI config changes reviewable.
-
-### Xcode
-
-- Instruments launch
-- Memory Graph
-- Time Profiler
-- Debug Navigator
-
-### Apple Documentation
-
-- Instruments Help
-- Debugging with Xcode
-
-### WWDC
-
-- Instruments sessions
-- SwiftUI performance sessions when relevant
-
-### Best Practices
-
-- Prefer clarity when working with Crash Reports.
-- Keep responsibilities small and names meaningful.
-- Validate understanding with a working example before moving on.
-
-### Design Thinking
-
-- What problem does Crash Reports solve?
-- What would a simpler alternative look like?
-- What trade-offs appear if this is overused?
-
-### Architecture Thinking
-
-- Where does this concept belong in a production app?
-- What should stay out of the UI layer?
-- How would this decision affect testing and change later?
-
-### Open Source
-
-- Read a performance-related pull request
-
-### AI
-
-- Ask AI to explain Crash Reports after you attempt it yourself.
-- Request a review of your design, not a full generated solution.
-- Challenge AI suggestions against Apple documentation.
-
-### English
-
-- Write a short explanation of Crash Reports in your own words.
-- Use precise terminology in notes and commit messages.
-- Practice explaining trade-offs as you would in a pull request.
-
-### Notes
-
-- Document Crash Reports, Logging, Monitoring, Diagnostics.
-- Capture common mistakes and Apple recommendations.
-- Link related modules and future spiral topics.
-
-### Reflection
-
-- Can I teach Crash Reports to another engineer?
-- What is still unclear?
-- How does this connect to previous phases?
-
----
-
-## Mini Project
-
-- Add structured logging.
-- Keep the scope small enough to finish, but realistic enough to reuse later.
-- Document one design decision and one mistake you corrected.
-
----
-
-## Exit Criteria
-
-You should be able to:
-
-- Use Crash Reports correctly in a realistic scenario and explain the trade-offs.
-- Use Logging correctly in a realistic scenario and explain the trade-offs.
-- Use Monitoring correctly in a realistic scenario and explain the trade-offs.
-- Use Diagnostics correctly in a realistic scenario and explain the trade-offs.
-- Finish the mini project and describe one design decision you made.
-- Write permanent notes covering the core topics, mistakes, and Apple guidance.
-- Meet every Learning Objective for this module.
-
-
----
-
-# Module 6 — Feature Flags & Configuration
-
-## Core Topics
-
-- Environment configuration
-- Debug vs Release
-- Feature flags
-- Remote configuration (concept)
-
----
-
-## Learning Objectives
-
-After completing this module you should be able to:
-
-- Understand Environment configuration and recognize when it is the right tool.
-- Understand Debug vs Release and recognize when it is the right tool.
-- Understand Feature flags and recognize when it is the right tool.
-- Understand Remote configuration (concept) and recognize when it is the right tool.
-- Apply the module concepts in the mini project without copying a full solution.
-- Use official documentation as the primary reference for this module.
-
----
-
-## Parallel Learning Layers
-
-### Git
-
-- Tag releases and annotate production builds.
-- Use release branches responsibly.
-- Keep CI config changes reviewable.
-
-### Xcode
-
-- Instruments launch
-- Memory Graph
-- Time Profiler
-- Debug Navigator
-
-### Apple Documentation
-
-- Instruments Help
-- Debugging with Xcode
-
-### WWDC
-
-- Instruments sessions
-- SwiftUI performance sessions when relevant
-
-### Best Practices
-
-- Prefer clarity when working with Environment configuration.
-- Keep responsibilities small and names meaningful.
-- Validate understanding with a working example before moving on.
-
-### Design Thinking
-
-- What problem does Environment configuration solve?
-- What would a simpler alternative look like?
-- What trade-offs appear if this is overused?
-
-### Architecture Thinking
-
-- Where does this concept belong in a production app?
-- What should stay out of the UI layer?
-- How would this decision affect testing and change later?
-
-### Open Source
-
-- Read a performance-related pull request
-
-### AI
-
-- Ask AI to explain Environment configuration after you attempt it yourself.
-- Request a review of your design, not a full generated solution.
-- Challenge AI suggestions against Apple documentation.
-
-### English
-
-- Write a short explanation of Environment configuration in your own words.
-- Use precise terminology in notes and commit messages.
-- Practice explaining trade-offs as you would in a pull request.
-
-### Notes
-
-- Document Environment configuration, Debug vs Release, Feature flags, Remote configuration (concept).
-- Capture common mistakes and Apple recommendations.
-- Link related modules and future spiral topics.
-
-### Reflection
-
-- Can I teach Environment configuration to another engineer?
-- What is still unclear?
-- How does this connect to previous phases?
-
----
-
-## Mini Project
-
-- Toggle features without rebuilding.
-- Keep the scope small enough to finish, but realistic enough to reuse later.
-- Document one design decision and one mistake you corrected.
-
----
-
-## Exit Criteria
-
-You should be able to:
-
-- Use Environment configuration correctly in a realistic scenario and explain the trade-offs.
-- Use Debug vs Release correctly in a realistic scenario and explain the trade-offs.
-- Use Feature flags correctly in a realistic scenario and explain the trade-offs.
-- Use Remote configuration (concept) correctly in a realistic scenario and explain the trade-offs.
-- Finish the mini project and describe one design decision you made.
-- Write permanent notes covering the core topics, mistakes, and Apple guidance.
-- Meet every Learning Objective for this module.
-
-
----
-
-# Module 7 — Maintenance & Technical Debt
-
-## Core Topics
-
-- Bug triage
-- Refactoring
-- Backward compatibility
-- Deprecation
-- Technical debt management
-
----
-
-## Learning Objectives
-
-After completing this module you should be able to:
-
-- Understand Bug triage and recognize when it is the right tool.
-- Understand Refactoring and recognize when it is the right tool.
-- Understand Backward compatibility and recognize when it is the right tool.
-- Understand Deprecation and recognize when it is the right tool.
-- Understand Technical debt management and recognize when it is the right tool.
-- Apply the module concepts in the mini project without copying a full solution.
-- Use official documentation as the primary reference for this module.
-
----
-
-## Parallel Learning Layers
-
-### Git
-
-- Tag releases and annotate production builds.
-- Use release branches responsibly.
-- Keep CI config changes reviewable.
+- Organize product milestones with Git tags.
+- Version releases for App Store builds.
+- Keep product docs and code history aligned.
 
 ### Xcode
 
@@ -786,7 +565,7 @@ After completing this module you should be able to:
 
 ### Apple Documentation
 
-- Official docs related to Bug triage, Refactoring, Backward compatibility, Deprecation
+- Official docs related to Paid Apps, Freemium, Subscriptions, In-App Purchases
 
 ### WWDC
 
@@ -794,13 +573,13 @@ After completing this module you should be able to:
 
 ### Best Practices
 
-- Prefer clarity when working with Bug triage.
+- Prefer clarity when working with Paid Apps.
 - Keep responsibilities small and names meaningful.
 - Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-- What problem does Bug triage solve?
+- What problem does Paid Apps solve?
 - What would a simpler alternative look like?
 - What trade-offs appear if this is overused?
 
@@ -812,29 +591,29 @@ After completing this module you should be able to:
 
 ### Open Source
 
-- Find a small open-source example related to Bug triage
+- Find a small open-source example related to Paid Apps
 
 ### AI
 
-- Ask AI to explain Bug triage after you attempt it yourself.
+- Ask AI to explain Paid Apps after you attempt it yourself.
 - Request a review of your design, not a full generated solution.
 - Challenge AI suggestions against Apple documentation.
 
 ### English
 
-- Write a short explanation of Bug triage in your own words.
+- Write a short explanation of Paid Apps in your own words.
 - Use precise terminology in notes and commit messages.
 - Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-- Document Bug triage, Refactoring, Backward compatibility, Deprecation.
+- Document Paid Apps, Freemium, Subscriptions, In-App Purchases.
 - Capture common mistakes and Apple recommendations.
 - Link related modules and future spiral topics.
 
 ### Reflection
 
-- Can I teach Bug triage to another engineer?
+- Can I teach Paid Apps to another engineer?
 - What is still unclear?
 - How does this connect to previous phases?
 
@@ -842,7 +621,7 @@ After completing this module you should be able to:
 
 ## Mini Project
 
-- Build a small focused exercise that proves you understand Bug triage.
+- Build a small focused exercise that proves you understand Paid Apps.
 - Keep the scope small enough to finish, but realistic enough to reuse later.
 - Document one design decision and one mistake you corrected.
 
@@ -852,10 +631,10 @@ After completing this module you should be able to:
 
 You should be able to:
 
-- Use Bug triage correctly in a realistic scenario and explain the trade-offs.
-- Use Refactoring correctly in a realistic scenario and explain the trade-offs.
-- Use Backward compatibility correctly in a realistic scenario and explain the trade-offs.
-- Use Deprecation correctly in a realistic scenario and explain the trade-offs.
+- Use Paid Apps correctly in a realistic scenario and explain the trade-offs.
+- Use Freemium correctly in a realistic scenario and explain the trade-offs.
+- Use Subscriptions correctly in a realistic scenario and explain the trade-offs.
+- Use In-App Purchases correctly in a realistic scenario and explain the trade-offs.
 - Finish the mini project and describe one design decision you made.
 - Write permanent notes covering the core topics, mistakes, and Apple guidance.
 - Meet every Learning Objective for this module.
@@ -863,9 +642,253 @@ You should be able to:
 
 ---
 
-# Phase Project
+# Module 6 — Marketing & Personal Brand
 
-Prepare and ship one application as if it were a real production product. Include: - Versioning - TestFlight build - CI pipeline - Crash logging - Analytics plan - Release checklist - Maintenance plan - Post-release retrospective ------------------------------------------------------------------------
+## Core Topics
+
+- App Store Optimization (ASO)
+- Landing Pages
+- Social Media
+- Content Marketing
+- Technical Writing
+- Personal Branding
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand App Store Optimization (ASO) and recognize when it is the right tool.
+- Understand Landing Pages and recognize when it is the right tool.
+- Understand Social Media and recognize when it is the right tool.
+- Understand Content Marketing and recognize when it is the right tool.
+- Understand Technical Writing and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Organize product milestones with Git tags.
+- Version releases for App Store builds.
+- Keep product docs and code history aligned.
+
+### Xcode
+
+- Navigator
+- Quick Help
+- Breakpoints
+- Documentation viewer
+
+### Apple Documentation
+
+- Official docs related to App Store Optimization (ASO), Landing Pages, Social Media, Content Marketing
+
+### WWDC
+
+- Only sessions that directly strengthen this module
+
+### Best Practices
+
+- Prefer clarity when working with App Store Optimization (ASO).
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does App Store Optimization (ASO) solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Find a small open-source example related to App Store Optimization (ASO)
+
+### AI
+
+- Ask AI to explain App Store Optimization (ASO) after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of App Store Optimization (ASO) in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document App Store Optimization (ASO), Landing Pages, Social Media, Content Marketing.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach App Store Optimization (ASO) to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Build a small focused exercise that proves you understand App Store Optimization (ASO).
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use App Store Optimization (ASO) correctly in a realistic scenario and explain the trade-offs.
+- Use Landing Pages correctly in a realistic scenario and explain the trade-offs.
+- Use Social Media correctly in a realistic scenario and explain the trade-offs.
+- Use Content Marketing correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 7 — Long-Term Product Management
+
+## Core Topics
+
+- Product Roadmaps
+- Feature Requests
+- Technical Debt
+- Customer Support
+- Continuous Improvement
+- Product Evolution
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand Product Roadmaps and recognize when it is the right tool.
+- Understand Feature Requests and recognize when it is the right tool.
+- Understand Technical Debt and recognize when it is the right tool.
+- Understand Customer Support and recognize when it is the right tool.
+- Understand Continuous Improvement and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Organize product milestones with Git tags.
+- Version releases for App Store builds.
+- Keep product docs and code history aligned.
+
+### Xcode
+
+- Navigator
+- Quick Help
+- Breakpoints
+- Documentation viewer
+
+### Apple Documentation
+
+- Official docs related to Product Roadmaps, Feature Requests, Technical Debt, Customer Support
+
+### WWDC
+
+- Only sessions that directly strengthen this module
+
+### Best Practices
+
+- Prefer clarity when working with Product Roadmaps.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does Product Roadmaps solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Find a small open-source example related to Product Roadmaps
+
+### AI
+
+- Ask AI to explain Product Roadmaps after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of Product Roadmaps in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document Product Roadmaps, Feature Requests, Technical Debt, Customer Support.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach Product Roadmaps to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Build a small focused exercise that proves you understand Product Roadmaps.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Product Roadmaps correctly in a realistic scenario and explain the trade-offs.
+- Use Feature Requests correctly in a realistic scenario and explain the trade-offs.
+- Use Technical Debt correctly in a realistic scenario and explain the trade-offs.
+- Use Customer Support correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Final Capstone Project
+
+Ship a complete product MVP using everything learned across the roadmap.
 
 ---
 
@@ -873,14 +896,16 @@ Prepare and ship one application as if it were a real production product. Includ
 
 You are ready for the next phase when you can:
 
-- Prepare an app for release.
-- Manage production builds.
-- Automate common workflows.
-- Monitor and improve released software.
-- Maintain software throughout its lifecycle.
+- Build complete software products independently.
+- Ship production
+- quality applications.
+- Make engineering and business decisions confidently.
+- Improve products using analytics and feedback.
+- Launch future products without following a predefined roadmap.
+- Continue learning new Apple technologies independently.
 
 ---
 
-# Next Phase
+# Final Milestone
 
-➡️ Phase 11 — Open Source & Code Reading
+You have completed the iOS Engineering System roadmap curriculum phases.

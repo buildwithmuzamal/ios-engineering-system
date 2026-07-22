@@ -1,12 +1,12 @@
 # Phase 02 — SwiftUI Mastery
 
-> Purpose: Learn SwiftUI from first principles by understanding how the framework works internally, how to build reusable user interfaces, and how to write production-quality SwiftUI applications.
+> **Purpose:** Learn SwiftUI by understanding how it works internally and how to build maintainable, production-quality user interfaces.
 
 ---
 
 # Goal
 
-Develop a deep understanding of SwiftUI so you can confidently design, build, debug, and maintain modern Apple user interfaces.
+Move beyond building screens. Learn to design reusable, performant, and maintainable SwiftUI applications.
 
 ---
 
@@ -14,13 +14,13 @@ Develop a deep understanding of SwiftUI so you can confidently design, build, de
 
 By the end of this phase you should be able to:
 
-- Build production-quality SwiftUI interfaces.
+- Build complex interfaces confidently.
 - Understand SwiftUI's rendering system.
-- Manage application state correctly.
-- Build reusable UI components.
-- Navigate complex applications.
+- Manage state correctly.
+- Create reusable components.
+- Navigate between screens using modern APIs.
+- Debug common SwiftUI issues.
 - Follow Apple's Human Interface Guidelines.
-- Write maintainable SwiftUI code.
 
 ---
 
@@ -29,27 +29,24 @@ By the end of this phase you should be able to:
 ## Core Topics
 
 - Declarative UI
-- View Protocol
+- View protocol
+- View hierarchy
 - Body
-- View Hierarchy
 - Modifiers
-- Value-based Views
-- Identity
-- Composition
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- Why SwiftUI is declarative.
-- How Views are created.
-- Why Views are structs.
-- How Body is recalculated.
-- How SwiftUI builds the UI hierarchy.
-- Why modifiers create new views.
-- How composition replaces inheritance.
+- Understand Declarative UI and recognize when it is the right tool.
+- Understand View protocol and recognize when it is the right tool.
+- Understand View hierarchy and recognize when it is the right tool.
+- Understand Body and recognize when it is the right tool.
+- Understand Modifiers and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -57,206 +54,82 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Create a repository for SwiftUI practice.
-- Feature branches.
-- Small commits after every lesson.
-- Meaningful commit messages.
-
-Practice:
-
-- One commit per exercise.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
-- SwiftUI App Template
+- SwiftUI App template
 - Canvas
 - Preview
 - Live Preview
-- Device Preview
-- Preview Variants
-- Inspector
-- View Debugger (Introduction)
-
-Practice:
-
-- Build every exercise using Preview before Simulator.
-
----
 
 ### Apple Documentation
 
-Read:
-
 - SwiftUI Overview
-- View Protocol
+- View
 - ViewBuilder
-- Scene
 - App
-
-Goal:
-
-Become comfortable navigating Apple's documentation instead of relying only on tutorials.
-
----
+- Scene
 
 ### WWDC
 
-Recommended Topics
-
 - Introduction to SwiftUI
 - Demystify SwiftUI
-- Data Essentials in SwiftUI
-
-Goal
-
-Understand how Apple's engineers think about SwiftUI.
-
----
 
 ### Best Practices
 
-Learn:
-
-- Small Views
-- Single Responsibility
-- Composition over large Views
-- Avoid Massive Body
-- Use meaningful names
-- Keep modifiers readable
-
-Avoid:
-
-- Giant Views
-- Duplicate UI
-- Deep nesting
-- Business logic inside Views
-
----
+- Keep Views small
+- Prefer composition
+- Avoid massive body blocks
 
 ### Design Thinking
 
-Questions to ask:
-
-- Why did Apple choose declarative UI?
-- Why are Views immutable?
-- Why is composition better than inheritance for UI?
-
----
+- Why is SwiftUI declarative?
+- Why are Views structs?
 
 ### Architecture Thinking
 
-Understand:
-
-Where should Views stop?
-
-What belongs inside:
-
-- View
-- ViewModel
-- Model
-
-Begin thinking about separation of responsibilities.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study one small SwiftUI project.
-
-Observe:
-
-- Folder structure
-- View naming
-- Reusable components
-- State organization
-
-Do NOT copy.
-
-Instead ask:
-
-"Why did they design it this way?"
-
----
+- Study view structure in a small SwiftUI open-source app
 
 ### AI
 
-Use AI to:
-
-- Explain modifiers.
-- Compare multiple solutions.
-- Review architecture.
-- Explain confusing documentation.
-
-Avoid:
-
-- Copy-pasting generated SwiftUI screens.
-- Blindly accepting AI code.
-
----
+- Ask AI to explain Declarative UI after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
 ### English
 
-Vocabulary
-
-- View
-- Modifier
-- Declarative
-- Hierarchy
-- Composition
-- Identity
-- Rendering
-
-Practice explaining these concepts in your own words.
-
----
+- Write a short explanation of Declarative UI in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-Maintain notes for:
-
-- New APIs
-- Common mistakes
-- Best practices
-- Important WWDC insights
-
----
+- Document Declarative UI, View protocol, View hierarchy, Body.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
 ### Reflection
 
-Ask yourself:
-
-- Why is SwiftUI declarative?
-- Could I explain the View protocol to another developer?
-- Why are Views structs instead of classes?
-- Why does Body return "some View"?
+- Can I teach Declarative UI to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
 ---
 
 ## Mini Project
 
-Build:
-
-A profile screen containing:
-
-- Avatar
-- Name
-- Bio
-- Buttons
-- Sections
-- Custom styling
-
-Requirements
-
-- Use reusable Views.
-- Keep Views small.
-- Organize modifiers.
-- Follow Apple's HIG.
+- Build simple profile-style screens with small composable Views.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
 
 ---
 
@@ -264,19 +137,14 @@ Requirements
 
 You should be able to:
 
-✓ Explain declarative UI.
+- Use Declarative UI correctly in a realistic scenario and explain the trade-offs.
+- Use View protocol correctly in a realistic scenario and explain the trade-offs.
+- Use View hierarchy correctly in a realistic scenario and explain the trade-offs.
+- Use Body correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
 
-✓ Explain View protocol.
-
-✓ Explain Body.
-
-✓ Explain why Views are structs.
-
-✓ Build reusable SwiftUI Views.
-
-✓ Read Apple documentation confidently.
-
-✓ Use Preview effectively.
 
 ---
 
@@ -288,29 +156,26 @@ You should be able to:
 - HStack
 - ZStack
 - Spacer
-- Divider
 - Padding
 - Frame
 - Alignment
-- Safe Area
 - GeometryReader
-- ScrollView
-- Grid
-- Lazy Containers
-- Coordinate Spaces
+- Safe Area
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- How SwiftUI calculates layouts.
-- How parent and child views influence each other.
-- How alignment works.
-- When GeometryReader should and shouldn't be used.
-- Why Lazy containers improve performance.
-- How to build adaptive layouts.
+- Understand VStack and recognize when it is the right tool.
+- Understand HStack and recognize when it is the right tool.
+- Understand ZStack and recognize when it is the right tool.
+- Understand Spacer and recognize when it is the right tool.
+- Understand Padding and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -318,217 +183,93 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Continue feature branch workflow.
-- Create one branch per layout exercise.
-- Practice meaningful pull requests.
-
-Practice:
-
-- Commit after each completed layout.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
+- Canvas
+- Preview
+- Live Preview
 - View Debugger
-- Preview Device Variants
-- Dynamic Type Preview
-- Landscape Preview
-- Different Screen Sizes
-
-Practice:
-
-- Verify every layout on:
-  - iPhone SE
-  - iPhone Pro Max
-  - iPad
-
----
 
 ### Apple Documentation
 
-Read:
-
-- Layout Fundamentals
-- Stacks
-- Grid
-- GeometryReader
-- Safe Area
-- ScrollView
-
-Goal:
-
-Understand Apple's layout philosophy instead of memorizing modifiers.
-
----
+- SwiftUI documentation for: VStack, HStack, ZStack, Spacer
 
 ### WWDC
 
-Recommended Topics
-
-- Compose Custom Layouts
-- SwiftUI Layout System
-- Demystify SwiftUI Layout
-
-Goal
-
-Understand how SwiftUI performs layout calculations.
-
----
+- SwiftUI sessions matching this module
 
 ### Best Practices
 
-Learn:
-
-- Prefer Stacks over GeometryReader.
-- Use Spacer intentionally.
-- Keep layout predictable.
-- Avoid magic numbers.
-- Design for multiple screen sizes.
-
-Avoid:
-
-- Nested GeometryReaders.
-- Fixed widths whenever possible.
-- Deep layout hierarchies.
-
----
+- Prefer clarity when working with VStack.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-Questions to ask:
-
-- Why does SwiftUI layout from parent to child?
-- Why are adaptive layouts important?
-- Why shouldn't every element have a fixed size?
-
----
+- What problem does VStack solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
 
 ### Architecture Thinking
 
-Understand:
-
-Separate:
-
-- Layout
-- Styling
-- Business Logic
-
-A View should describe presentation—not application logic.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study:
-
-A SwiftUI application with responsive layouts.
-
-Observe:
-
-- Stack usage.
-- Grid usage.
-- Adaptive layouts.
-- Component organization.
-
-Ask:
-
-"Why was this layout chosen?"
-
----
+- Study view structure in a small SwiftUI open-source app
 
 ### AI
 
-Use AI to:
-
-- Compare VStack vs LazyVStack.
-- Explain GeometryReader behavior.
-- Explain alignment calculations.
-- Review layout decisions.
-
-Avoid:
-
-- Asking AI to build complete screens.
-
----
+- Ask AI to explain VStack after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
 ### English
 
-Vocabulary
-
-- Layout
-- Alignment
-- Spacing
-- Constraint
-- Geometry
-- Coordinate Space
-- Adaptive
-- Responsive
-
-Practice:
-
-Explain how SwiftUI layouts work using your own words.
-
----
+- Write a short explanation of VStack in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-Document:
-
-- Layout rules.
-- Common mistakes.
-- GeometryReader notes.
-- Safe Area behavior.
-- Adaptive layout tips.
-
----
+- Document VStack, HStack, ZStack, Spacer.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
 ### Reflection
 
-Ask yourself:
-
-- Why did SwiftUI place this View here?
-- Could this layout adapt to iPad?
-- Is GeometryReader really needed?
+- Can I teach VStack to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
 ---
 
 ## Mini Project
 
-Build a Dashboard Screen containing:
-
-- Header
-- Statistics Cards
-- Grid Section
-- Recent Activity
-- Bottom Action Area
-
-Requirements
-
-- Adaptive layout
-- ScrollView
-- Lazy Grid
-- Proper spacing
-- Safe Area support
-- Dynamic Type support
+- Recreate common app layouts with stacks, spacer, frame, and safe area.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
 
 ---
 
 ## Exit Criteria
 
-✓ Build adaptive layouts.
+You should be able to:
 
-✓ Explain SwiftUI's layout system.
+- Use VStack correctly in a realistic scenario and explain the trade-offs.
+- Use HStack correctly in a realistic scenario and explain the trade-offs.
+- Use ZStack correctly in a realistic scenario and explain the trade-offs.
+- Use Spacer correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
 
-✓ Use GeometryReader correctly.
-
-✓ Design responsive interfaces.
-
-✓ Support multiple devices.
 
 ---
 
@@ -536,28 +277,28 @@ Requirements
 
 ## Core Topics
 
-- Data Flow
-- Source of Truth
 - @State
 - @Binding
-- @Observable
 - @StateObject
 - @ObservedObject
 - @Environment
 - @EnvironmentObject
-- Environment Values
+- Observation framework
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- Who owns state.
-- How data flows through SwiftUI.
-- Which property wrapper to use.
-- Why state management is one of the most important SwiftUI concepts.
-- How incorrect state ownership creates bugs.
+- Understand @State and recognize when it is the right tool.
+- Understand @Binding and recognize when it is the right tool.
+- Understand @StateObject and recognize when it is the right tool.
+- Understand @ObservedObject and recognize when it is the right tool.
+- Understand @Environment and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -565,205 +306,93 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Commit after each property wrapper exercise.
-- Document state management changes clearly.
-
-Practice:
-
-Create a branch for each data-flow experiment.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
-- SwiftUI Inspector
-- Live Preview updates
-- Debug View Hierarchy
-- State change debugging
-
-Practice:
-
-Observe how UI updates when state changes.
-
----
+- Canvas
+- Preview
+- Live Preview
+- View Debugger
 
 ### Apple Documentation
 
-Read:
-
-- Managing Data Flow
-- State
-- Binding
-- Observation Framework
-- Environment
-
-Goal
-
-Understand Apple's recommended ownership model.
-
----
+- Managing model data in your app
+- Migrating from the Observable Object protocol to the Observable macro
 
 ### WWDC
 
-Recommended Topics
-
 - Data Essentials in SwiftUI
-- Discover Observation
-- Demystify SwiftUI
-
-Goal
-
-Understand why SwiftUI updates views automatically.
-
----
+- Discover Observation in SwiftUI
 
 ### Best Practices
 
-Learn:
-
-- One source of truth.
-- Pass only required data.
-- Keep state local whenever possible.
-- Avoid unnecessary EnvironmentObjects.
-
-Avoid:
-
-- Duplicated state.
-- Massive shared state.
-- Using EnvironmentObject everywhere.
-
----
+- Choose the narrowest property wrapper
+- Avoid unnecessary object ownership
 
 ### Design Thinking
 
-Questions to ask:
-
-- Who owns this data?
-- Who should modify it?
-- Who only needs to read it?
-
----
+- Who owns this state?
+- What should be derived vs stored?
 
 ### Architecture Thinking
 
-Understand:
-
-Responsibilities of:
-
-- View
-- ViewModel
-- Model
-
-Understand dependency direction.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study:
-
-How mature SwiftUI projects organize state.
-
-Observe:
-
-- ViewModels
-- Environment
-- Bindings
-- Dependency Injection
-
----
+- Study view structure in a small SwiftUI open-source app
 
 ### AI
 
-Use AI to:
-
-- Compare property wrappers.
-- Review data flow.
-- Explain rendering behavior.
-
-Avoid:
-
-- Asking "Which wrapper?" before reasoning yourself.
-
----
+- Ask AI to explain @State after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
 ### English
 
-Vocabulary
-
-- State
-- Binding
-- Observable
-- Dependency
-- Ownership
-- Data Flow
-- Environment
-
-Practice:
-
-Explain each property wrapper in your own words.
-
----
+- Write a short explanation of @State in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-Create comparison tables for:
-
-- @State
-- @Binding
-- @Observable
-- @StateObject
-- @ObservedObject
-- @Environment
-- @EnvironmentObject
-
----
+- Document @State, @Binding, @StateObject, @ObservedObject.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
 ### Reflection
 
-Ask yourself:
-
-- Who owns the data?
-- Why is this wrapper correct?
-- Could this state live somewhere else?
+- Can I teach @State to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
 ---
 
 ## Mini Project
 
-Build a Task Manager featuring:
-
-- Task List
-- Task Details
-- Add/Edit Task
-- Filters
-- Settings Screen
-
-Requirements
-
-- Correct state ownership.
-- Proper Bindings.
-- Environment values.
-- Observable ViewModels.
-- No duplicated state.
+- Build forms and interactive screens using the correct state tools.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
 
 ---
 
 ## Exit Criteria
 
-✓ Choose the correct property wrapper.
+You should be able to:
 
-✓ Explain SwiftUI data flow.
+- Use @State correctly in a realistic scenario and explain the trade-offs.
+- Use @Binding correctly in a realistic scenario and explain the trade-offs.
+- Use @StateObject correctly in a realistic scenario and explain the trade-offs.
+- Use @ObservedObject correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
 
-✓ Build predictable state management.
-
-✓ Debug state-related issues.
-
-✓ Understand ownership and dependencies.
 
 ---
 
@@ -773,27 +402,26 @@ Requirements
 
 - NavigationStack
 - NavigationPath
-- NavigationLink
-- Programmatic Navigation
-- Deep Linking (Introduction)
+- TabView
 - Sheets
 - Full Screen Covers
-- Popovers
 - Alerts
 - Confirmation Dialogs
-- NavigationSplitView (Introduction)
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- How navigation works in SwiftUI.
-- When to use NavigationStack.
-- How programmatic navigation works.
-- When to present a Sheet versus pushing a screen.
-- How to design scalable navigation for larger applications.
+- Understand NavigationStack and recognize when it is the right tool.
+- Understand NavigationPath and recognize when it is the right tool.
+- Understand TabView and recognize when it is the right tool.
+- Understand Sheets and recognize when it is the right tool.
+- Understand Full Screen Covers and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -801,209 +429,93 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Create feature branches for navigation changes.
-- Keep navigation refactoring in isolated commits.
-- Document navigation architecture in commit messages.
-
-Practice:
-
-Implement each navigation style in a separate branch.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
-- Debug Navigation Stack.
-- Preview navigation flows.
-- Deep-link testing.
-- Breakpoints during navigation.
-
-Practice:
-
-Test navigation across multiple devices.
-
----
+- Canvas
+- Preview
+- Live Preview
+- View Debugger
 
 ### Apple Documentation
 
-Read:
-
-- NavigationStack
-- NavigationLink
-- NavigationPath
-- Sheet
-- FullScreenCover
-- Alert
-- ConfirmationDialog
-
-Goal:
-
-Understand Apple's recommended navigation APIs.
-
----
+- SwiftUI documentation for: NavigationStack, NavigationPath, TabView, Sheets
 
 ### WWDC
 
-Recommended Topics
-
-- The SwiftUI cookbook for navigation
-- What's new in SwiftUI Navigation
-
-Goal
-
-Understand why NavigationStack replaced NavigationView.
-
----
+- SwiftUI sessions matching this module
 
 ### Best Practices
 
-Learn:
-
-- Prefer NavigationStack.
-- Keep navigation predictable.
-- Avoid deeply nested navigation.
-- Separate navigation logic from UI.
-- Use enum-based destinations when appropriate.
-
-Avoid:
-
-- Massive navigation logic inside Views.
-- Multiple competing navigation states.
-- Complex navigation hierarchies.
-
----
+- Prefer clarity when working with NavigationStack.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-Questions to ask:
-
-- What is the simplest journey for the user?
-- Does this navigation feel natural?
-- Should this screen be pushed or presented modally?
-
----
+- What problem does NavigationStack solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
 
 ### Architecture Thinking
 
-Understand:
-
-Navigation should be:
-
-- Predictable
-- Testable
-- Independent from business logic
-
-Think about how large applications organize navigation.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study:
-
-A production SwiftUI application.
-
-Observe:
-
-- Navigation organization
-- Routing strategy
-- Modal presentation
-- Deep linking support
-
-Ask:
-
-"How would this scale to 100 screens?"
-
----
+- Study view structure in a small SwiftUI open-source app
 
 ### AI
 
-Use AI to:
-
-- Compare NavigationStack vs Sheets.
-- Review routing architecture.
-- Explain NavigationPath.
-
-Avoid:
-
-- Generating entire navigation systems.
-
----
+- Ask AI to explain NavigationStack after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
 ### English
 
-Vocabulary
-
-- Navigation
-- Route
-- Destination
-- Deep Link
-- Modal
-- Sheet
-- Stack
-
-Practice:
-
-Explain when each navigation style should be used.
-
----
+- Write a short explanation of NavigationStack in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-Document:
-
-- Navigation APIs
-- Presentation styles
-- Navigation patterns
-- Common mistakes
-
----
+- Document NavigationStack, NavigationPath, TabView, Sheets.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
 ### Reflection
 
-Ask yourself:
-
-- Why did I choose a Sheet?
-- Could this navigation scale?
-- Is the flow intuitive?
+- Can I teach NavigationStack to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
 ---
 
 ## Mini Project
 
-Build a Shopping Application featuring:
-
-- Home
-- Categories
-- Product Details
-- Cart
-- Checkout
-- Profile
-- Settings
-
-Requirements
-
-- NavigationStack
-- Programmatic Navigation
-- Sheets
-- Alerts
-- Confirmation Dialogs
+- Build a multi-screen application with NavigationStack, sheets, and alerts.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
 
 ---
 
 ## Exit Criteria
 
-✓ Build scalable navigation.
+You should be able to:
 
-✓ Choose the correct presentation style.
+- Use NavigationStack correctly in a realistic scenario and explain the trade-offs.
+- Use NavigationPath correctly in a realistic scenario and explain the trade-offs.
+- Use TabView correctly in a realistic scenario and explain the trade-offs.
+- Use Sheets correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
 
-✓ Explain NavigationStack.
-
-✓ Separate navigation from business logic.
 
 ---
 
@@ -1012,34 +524,27 @@ Requirements
 ## Core Topics
 
 - List
-- Section
-- ForEach
-- Identifiable
 - ScrollView
 - LazyVStack
 - LazyHStack
 - Form
-- TextField
-- SecureField
-- Toggle
-- Picker
-- Stepper
-- DatePicker
+- Sections
 - Swipe Actions
-- Refreshable
-- Searchable
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- How Lists work internally.
-- How Forms differ from Lists.
-- How to build data-driven interfaces.
-- How to optimize scrolling performance.
-- How to collect user input effectively.
+- Understand List and recognize when it is the right tool.
+- Understand ScrollView and recognize when it is the right tool.
+- Understand LazyVStack and recognize when it is the right tool.
+- Understand LazyHStack and recognize when it is the right tool.
+- Understand Form and recognize when it is the right tool.
+- Connect the remaining core topics into one coherent mental model.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -1047,680 +552,117 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Commit each completed form.
-- Track UI improvements separately.
-
-Practice:
-
-One commit per screen.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
-- Preview Forms.
-- Dynamic Type Preview.
-- Accessibility Preview.
-
-Practice:
-
-Test on multiple screen sizes.
-
----
-
-### Apple Documentation
-
-Read:
-
-- List
-- Form
-- Section
-- Searchable
-- Refreshable
-- SwipeActions
-
-Goal
-
-Understand when each component should be used.
-
----
-
-### WWDC
-
-Recommended Topics
-
-- SwiftUI Lists
-- Data-driven interfaces
-
-Goal
-
-Learn Apple's recommended patterns.
-
----
-
-### Best Practices
-
-Learn:
-
-- Prefer Identifiable models.
-- Keep Forms simple.
-- Validate user input.
-- Separate UI from business rules.
-
-Avoid:
-
-- Large Forms.
-- Duplicate validation.
-- Complex List rows.
-
----
-
-### Design Thinking
-
-Questions to ask:
-
-- Is this form easy to complete?
-- Does this List communicate information clearly?
-- Can users accomplish their task quickly?
-
----
-
-### Architecture Thinking
-
-Understand:
-
-Separate:
-
-- UI
-- Validation
-- Business Rules
-- Persistence
-
----
-
-### Open Source
-
-Study:
-
-Large Lists.
-
-Observe:
-
-- Row composition
-- Search
-- Refresh
-- Pagination
-
----
-
-### AI
-
-Use AI to:
-
-- Review validation logic.
-- Compare List approaches.
-- Explain Lazy containers.
-
-Avoid:
-
-- Generating complete Forms.
-
----
-
-### English
-
-Vocabulary
-
-- List
-- Section
-- Row
-- Validation
-- Search
-- Refresh
-- Pagination
-
-Practice:
-
-Describe your screen structure clearly.
-
----
-
-### Notes
-
-Document:
-
-- List APIs
-- Form APIs
-- Validation rules
-- Common mistakes
-
----
-
-### Reflection
-
-Ask yourself:
-
-- Could this List scale to thousands of items?
-- Is the form easy to understand?
-- Are users likely to make mistakes?
-
----
-
-## Mini Project
-
-Build a Personal Expense Tracker featuring:
-
-- Expense List
-- Categories
-- Search
-- Filters
-- Add/Edit Expense
-- Settings
-
-Requirements
-
-- List
-- Form
-- Swipe Actions
-- Search
-- Refresh
-- Validation
-
----
-
-## Exit Criteria
-
-✓ Build efficient Lists.
-
-✓ Design user-friendly Forms.
-
-✓ Validate input correctly.
-
-✓ Build scalable data-driven interfaces.
-
----
-
-# Module 6 — Reusable Components
-
-## Core Topics
-
-- View Composition
-- Reusable Views
-- Generic Views
-- View Builders
-- Custom View Modifiers
-- Environment Values
-- PreferenceKey (Introduction)
-- Design System (Introduction)
-
----
-
-## Learning Objectives
-
-After completing this module you should understand:
-
-- How to build reusable UI components.
-- When to create a reusable component.
-- How to avoid duplicated UI.
-- How to design scalable component libraries.
-- How Design Systems improve consistency.
-
----
-
-## Parallel Learning Layers
-
-### Git
-
-Learn:
-
-- Organize reusable components into dedicated folders.
-- Create separate commits for reusable components.
-- Refactor duplicated UI incrementally.
-
-Practice:
-
-Extract one reusable component every time duplication appears.
-
----
-
-### Xcode
-
-Learn:
-
-- SwiftUI Preview for reusable Views.
-- Preview multiple states.
-- Preview light/dark mode.
-- Preview Dynamic Type.
-
-Practice:
-
-Every reusable component should have Preview examples.
-
----
-
-### Apple Documentation
-
-Read:
-
-- ViewModifier
-- ViewBuilder
-- Group
-- AnyView (understand why to avoid it when possible)
-- Environment
-- PreferenceKey
-
-Goal
-
-Understand the official techniques for creating reusable UI.
-
----
-
-### WWDC
-
-Recommended Topics
-
-- Structure your app for SwiftUI previews
-- Compose custom interfaces
-- Demystify SwiftUI
-
-Goal
-
-Learn how Apple engineers build reusable interfaces.
-
----
-
-### Best Practices
-
-Learn:
-
-- Composition over inheritance.
-- Small reusable Views.
-- Reusable modifiers.
-- Consistent naming.
-- Keep components focused.
-
-Avoid:
-
-- Huge reusable Views.
-- Highly configurable "God Components."
-- Copy-paste UI.
-
----
-
-### Design Thinking
-
-Questions to ask:
-
-- Will this UI appear again?
-- Can another developer understand this component?
-- Is this reusable because it should be, or because I forced it?
-
----
-
-### Architecture Thinking
-
-Understand:
-
-Difference between:
-
-- Shared Components
-- Feature Components
-- Screen Components
-
-Learn where reusable code should live.
-
----
-
-### Open Source
-
-Study:
-
-Design systems from mature SwiftUI projects.
-
-Observe:
-
-- Component naming.
-- Folder organization.
-- Reusable modifiers.
-- Button styles.
-- Card views.
-
----
-
-### AI
-
-Use AI to:
-
-- Review component APIs.
-- Suggest better naming.
-- Compare multiple component designs.
-
-Avoid:
-
-- Asking AI to generate entire design systems.
-
----
-
-### English
-
-Vocabulary
-
-- Component
-- Reusable
-- Composition
-- Style
-- Design System
-- Generic
-- Modifier
-
-Practice:
-
-Explain why a component is reusable.
-
----
-
-### Notes
-
-Document:
-
-- Reusable components.
-- Naming conventions.
-- Modifier patterns.
-- Component guidelines.
-
----
-
-### Reflection
-
-Ask yourself:
-
-- Is this reusable?
-- Is it too generic?
-- Would another project benefit from this component?
-
----
-
-## Mini Project
-
-Build a Component Library containing:
-
-- Buttons
-- Cards
-- Profile Avatar
-- Tags
-- Chips
-- Loading View
-- Error View
-- Empty State
-- Custom Text Fields
-
-Requirements
-
-- Reusable
-- Preview support
-- Light/Dark Mode
-- Dynamic Type
-- Accessibility support
-
----
-
-## Exit Criteria
-
-✓ Build reusable Views.
-
-✓ Create custom modifiers.
-
-✓ Organize component libraries.
-
-✓ Avoid duplicated UI.
-
----
-
-# Module 7 — Drawing, Animation & Gestures
-
-## Core Topics
-
-- Shapes
-- Paths
-- Canvas (Introduction)
-- Gestures
-- DragGesture
-- MagnificationGesture
-- RotationGesture
-- Animation
-- withAnimation
-- Animation Curves
-- Transitions
-- Matched Geometry Effect
-- TimelineView (Introduction)
-
----
-
-## Learning Objectives
-
-After completing this module you should understand:
-
-- How SwiftUI animations work.
-- How gestures interact with state.
-- When animations improve UX.
-- How to build smooth interactions.
-
----
-
-## Parallel Learning Layers
-
-### Git
-
-Learn:
-
-- Create commits for animation improvements.
-- Track UX changes separately.
-
-Practice:
-
-One commit per animation experiment.
-
----
-
-### Xcode
-
-Learn:
-
-- Animation Preview.
-- Slow Animations.
-- Debug View Hierarchy.
-
-Practice:
-
-Test animations on physical devices.
-
----
-
-### Apple Documentation
-
-Read:
-
-- Animation
-- Transition
-- Gesture
-- Shape
 - Canvas
+- Preview
+- Live Preview
+- View Debugger
 
-Goal
+### Apple Documentation
 
-Understand SwiftUI's animation system.
-
----
+- SwiftUI documentation for: List, ScrollView, LazyVStack, LazyHStack
 
 ### WWDC
 
-Recommended Topics
-
-- Explore SwiftUI animation
-- SwiftUI gestures
-- What's new in SwiftUI animation
-
----
+- SwiftUI sessions matching this module
 
 ### Best Practices
 
-Learn:
-
-- Animate meaningful changes.
-- Keep animations subtle.
-- Use consistent timing.
-- Respect Reduce Motion.
-
-Avoid:
-
-- Decorative animations.
-- Long animations.
-- Multiple competing animations.
-
----
+- Prefer clarity when working with List.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-Questions to ask:
-
-- Does this animation communicate something?
-- Does it improve usability?
-- Would removing it make the experience worse?
-
----
+- What problem does List solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
 
 ### Architecture Thinking
 
-Understand:
-
-Animation belongs in presentation—not business logic.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study:
-
-Apps with polished interactions.
-
-Observe:
-
-- Gesture handling.
-- Animation timing.
-- State changes.
-
----
+- Study view structure in a small SwiftUI open-source app
 
 ### AI
 
-Use AI to:
-
-- Compare animation approaches.
-- Explain MatchedGeometryEffect.
-- Review gesture implementation.
-
-Avoid:
-
-- Copying flashy animations without understanding them.
-
----
+- Ask AI to explain List after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
 ### English
 
-Vocabulary
-
-- Transition
-- Gesture
-- Animation
-- Spring
-- Drag
-- Rotation
-- Scale
-
-Practice:
-
-Explain animation decisions.
-
----
+- Write a short explanation of List in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-Document:
-
-- Animation APIs.
-- Gesture APIs.
-- Common animation patterns.
-
----
+- Document List, ScrollView, LazyVStack, LazyHStack.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
 ### Reflection
 
-Ask yourself:
-
-- Does every animation have a purpose?
-- Is the interaction intuitive?
-- Does this respect accessibility?
+- Can I teach List to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
 ---
 
 ## Mini Project
 
-Build an Interactive Photo Gallery featuring:
-
-- Drag
-- Pinch to Zoom
-- Rotation
-- Smooth transitions
-- Hero animations
-- Interactive cards
+- Create a notes application interface with List, Form, and swipe actions.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
 
 ---
 
 ## Exit Criteria
 
-✓ Build meaningful animations.
+You should be able to:
 
-✓ Handle gestures confidently.
+- Use List correctly in a realistic scenario and explain the trade-offs.
+- Use ScrollView correctly in a realistic scenario and explain the trade-offs.
+- Use LazyVStack correctly in a realistic scenario and explain the trade-offs.
+- Use LazyHStack correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
 
-✓ Improve UX through motion.
-
-✓ Respect accessibility guidelines.
 
 ---
 
-# Module 8 — Accessibility & Localization
+# Module 6 — Custom Components
 
 ## Core Topics
 
-- Accessibility
-- VoiceOver
-- Accessibility Labels
-- Accessibility Values
-- Accessibility Traits
-- Dynamic Type
-- Color Contrast
-- Reduce Motion
-- Localization
-- String Catalog
-- LocalizedStringKey
-- Right-to-Left (RTL) Layout
-- Region & Locale
+- Reusable Views
+- View Composition
+- Custom Modifiers
+- Preference Keys (introduction)
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- Why accessibility is a core engineering responsibility.
-- How to build interfaces everyone can use.
-- How localization affects UI design.
-- How to support multiple languages correctly.
-- How accessibility improves overall application quality.
+- Understand Reusable Views and recognize when it is the right tool.
+- Understand View Composition and recognize when it is the right tool.
+- Understand Custom Modifiers and recognize when it is the right tool.
+- Understand Preference Keys (introduction) and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -1728,220 +670,237 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Organize localization commits separately.
-- Track accessibility improvements independently.
-
-Practice:
-
-Commit accessibility enhancements incrementally.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
-- Accessibility Inspector
-- Dynamic Type Preview
-- Localization Preview
-- Right-to-Left Preview
-
-Practice:
-
-Test every screen using accessibility tools before considering it complete.
-
----
+- Canvas
+- Preview
+- Live Preview
+- View Debugger
 
 ### Apple Documentation
 
-Read:
-
-- Accessibility
-- Human Interface Guidelines
-- Localization
-- String Catalog
-- Dynamic Type
-
-Goal:
-
-Understand Apple's accessibility philosophy.
-
----
+- SwiftUI documentation for: Reusable Views, View Composition, Custom Modifiers, Preference Keys (introduction)
 
 ### WWDC
 
-Recommended Topics
-
-- Build accessible apps with SwiftUI
-- Design for everyone
-- What's new in Accessibility
-
-Goal
-
-Learn directly from Apple's accessibility engineers.
-
----
+- SwiftUI sessions matching this module
 
 ### Best Practices
 
-Learn:
-
-- Accessibility from the beginning.
-- Every interactive element needs a label.
-- Support Dynamic Type.
-- Respect Reduce Motion.
-- Use semantic colors.
-
-Avoid:
-
-- Hardcoded font sizes.
-- Text inside images.
-- Color-only communication.
-- Ignoring VoiceOver.
-
----
+- Prefer clarity when working with Reusable Views.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-Questions to ask:
-
-- Could someone with low vision use this?
-- Can VoiceOver explain this interface?
-- Can users complete tasks without relying on color?
-
----
+- What problem does Reusable Views solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
 
 ### Architecture Thinking
 
-Understand:
-
-Accessibility should be part of every component instead of being added at the end.
-
-Localization should be designed early instead of replacing strings later.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study:
+- Study view structure in a small SwiftUI open-source app
 
-Accessibility implementation from mature SwiftUI projects.
+### AI
 
-Observe:
+- Ask AI to explain Reusable Views after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
+### English
+
+- Write a short explanation of Reusable Views in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document Reusable Views, View Composition, Custom Modifiers, Preference Keys (introduction).
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach Reusable Views to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Build a reusable UI component library with custom modifiers.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Reusable Views correctly in a realistic scenario and explain the trade-offs.
+- Use View Composition correctly in a realistic scenario and explain the trade-offs.
+- Use Custom Modifiers correctly in a realistic scenario and explain the trade-offs.
+- Use Preference Keys (introduction) correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 7 — Animation
+
+## Core Topics
+
+- Implicit Animation
+- Explicit Animation
+- Matched Geometry Effect
+- Transitions
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand Implicit Animation and recognize when it is the right tool.
+- Understand Explicit Animation and recognize when it is the right tool.
+- Understand Matched Geometry Effect and recognize when it is the right tool.
+- Understand Transitions and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
+
+### Xcode
+
+- Canvas
+- Preview
+- Live Preview
+- View Debugger
+
+### Apple Documentation
+
+- SwiftUI documentation for: Implicit Animation, Explicit Animation, Matched Geometry Effect, Transitions
+
+### WWDC
+
+- SwiftUI sessions matching this module
+
+### Best Practices
+
+- Prefer clarity when working with Implicit Animation.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does Implicit Animation solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Study view structure in a small SwiftUI open-source app
+
+### AI
+
+- Ask AI to explain Implicit Animation after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of Implicit Animation in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document Implicit Animation, Explicit Animation, Matched Geometry Effect, Transitions.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach Implicit Animation to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Animate screen transitions and interactive elements with implicit and explicit animations.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Implicit Animation correctly in a realistic scenario and explain the trade-offs.
+- Use Explicit Animation correctly in a realistic scenario and explain the trade-offs.
+- Use Matched Geometry Effect correctly in a realistic scenario and explain the trade-offs.
+- Use Transitions correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 8 — Accessibility
+
+## Core Topics
+
+- VoiceOver
 - Labels
 - Traits
-- Localization
 - Dynamic Type
-
----
-
-### AI
-
-Use AI to:
-
-- Review accessibility.
-- Identify missing labels.
-- Suggest localization improvements.
-
-Avoid:
-
-- Depending entirely on AI for accessibility validation.
-
----
-
-### English
-
-Vocabulary
-
-- Accessibility
-- Localization
-- VoiceOver
-- Dynamic Type
-- Semantic
-- Locale
-- Translation
-
-Practice:
-
-Explain accessibility decisions clearly.
-
----
-
-### Notes
-
-Document:
-
-- Accessibility APIs
-- Localization workflow
-- Common mistakes
-- Human Interface Guidelines
-
----
-
-### Reflection
-
-Ask yourself:
-
-- Could every user use this application?
-- What accessibility improvements remain?
-- Would this app work in another language?
-
----
-
-## Mini Project
-
-Improve an existing application by adding:
-
-- VoiceOver support
-- Dynamic Type
-- Localization
-- RTL support
-- Semantic colors
-- Accessibility labels
-
----
-
-## Exit Criteria
-
-✓ Build accessible interfaces.
-
-✓ Support multiple languages.
-
-✓ Follow Apple's accessibility guidelines.
-
-✓ Test accessibility confidently.
-
----
-
-# Module 9 — Performance & Rendering
-
-## Core Topics
-
-- View Identity
-- Rendering Cycle
-- Body Recalculation
-- Equatable
-- Lazy Containers
-- State Updates
-- Invalidations
-- PreferenceKey
-- Instruments (SwiftUI)
-- Memory Considerations
+- Color Contrast
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- How SwiftUI renders Views.
-- Why unnecessary rendering happens.
-- How to optimize SwiftUI performance.
-- How identity affects rendering.
-- How to measure instead of guessing.
+- Understand VoiceOver and recognize when it is the right tool.
+- Understand Labels and recognize when it is the right tool.
+- Understand Traits and recognize when it is the right tool.
+- Understand Dynamic Type and recognize when it is the right tool.
+- Understand Color Contrast and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -1949,217 +908,119 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Keep optimization commits isolated.
-- Document performance improvements.
-
-Practice:
-
-Measure before and after every optimization.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
-- Instruments
-- Memory Graph
+- Canvas
+- Preview
+- Live Preview
 - View Debugger
-- SwiftUI Performance Tools
-
-Practice:
-
-Profile every optimization.
-
----
 
 ### Apple Documentation
 
-Read:
-
-- SwiftUI Performance
-- Instruments
-- View Identity
-
-Goal:
-
-Understand why SwiftUI performs the way it does.
-
----
+- SwiftUI documentation for: VoiceOver, Labels, Traits, Dynamic Type
 
 ### WWDC
 
-Recommended Topics
-
-- Demystify SwiftUI Performance
-- Improve SwiftUI Performance
-- Optimize SwiftUI Rendering
-
-Goal
-
-Learn how Apple's engineers optimize large applications.
-
----
+- SwiftUI sessions matching this module
 
 ### Best Practices
 
-Learn:
-
-- Measure before optimizing.
-- Use Lazy containers.
-- Avoid unnecessary state updates.
-- Keep Views lightweight.
-- Use stable identity.
-
-Avoid:
-
-- Premature optimization.
-- Expensive calculations inside body.
-- Duplicate state.
-
----
+- Prefer clarity when working with VoiceOver.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-Questions to ask:
-
-- Is optimization necessary?
-- Is user experience actually affected?
-
----
+- What problem does VoiceOver solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
 
 ### Architecture Thinking
 
-Understand:
-
-Good architecture naturally improves performance.
-
-Poor separation often creates unnecessary rendering.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study:
-
-Large SwiftUI applications.
-
-Observe:
-
-- Rendering strategies
-- Lazy containers
-- View identity
-- State ownership
-
----
+- Study view structure in a small SwiftUI open-source app
 
 ### AI
 
-Use AI to:
-
-- Review rendering behavior.
-- Explain unnecessary redraws.
-- Compare optimization techniques.
-
-Avoid:
-
-- Blindly applying optimization advice.
-
----
+- Ask AI to explain VoiceOver after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
 ### English
 
-Vocabulary
-
-- Rendering
-- Invalidation
-- Recalculation
-- Performance
-- Optimization
-- Identity
-- Profiling
-
-Practice:
-
-Explain why SwiftUI re-rendered a View.
-
----
+- Write a short explanation of VoiceOver in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-Document:
-
-- Performance tools.
-- Rendering rules.
-- Common bottlenecks.
-- Optimization checklist.
-
----
+- Document VoiceOver, Labels, Traits, Dynamic Type.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
 ### Reflection
 
-Ask yourself:
-
-- Did I measure this?
-- Is the optimization worth the added complexity?
-- What actually caused the slowdown?
+- Can I teach VoiceOver to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
 ---
 
 ## Mini Project
 
-Optimize one of your previous SwiftUI applications.
-
-Requirements
-
-- Reduce unnecessary rendering.
-- Improve scrolling performance.
-- Measure using Instruments.
-- Document every optimization.
-- Compare before vs after performance.
+- Make one existing screen fully accessible with VoiceOver, labels, and Dynamic Type.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
 
 ---
 
 ## Exit Criteria
 
-✓ Explain SwiftUI rendering.
+You should be able to:
 
-✓ Optimize based on measurements.
+- Use VoiceOver correctly in a realistic scenario and explain the trade-offs.
+- Use Labels correctly in a realistic scenario and explain the trade-offs.
+- Use Traits correctly in a realistic scenario and explain the trade-offs.
+- Use Dynamic Type correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
 
-✓ Use Instruments confidently.
-
-✓ Understand View identity.
 
 ---
 
-# Module 10 — SwiftUI Architecture Patterns
+# Module 9 — Performance
 
 ## Core Topics
 
-- MVVM in SwiftUI
-- Dependency Injection
-- Feature-based Architecture
-- Reusable Modules
-- State Ownership
-- Environment Dependencies
-- Navigation Architecture
-- Error Handling
-- Scalability
-- Maintainability
+- View identity
+- Equatable
+- Lazy containers
+- Rendering performance
+- Common performance mistakes
 
 ---
 
 ## Learning Objectives
 
-After completing this module you should understand:
+After completing this module you should be able to:
 
-- How to organize medium and large SwiftUI applications.
-- How to separate UI from business logic.
-- How dependency injection improves testing and maintainability.
-- How feature-based architecture scales.
-- How to build applications that are easy to modify.
+- Understand View identity and recognize when it is the right tool.
+- Understand Equatable and recognize when it is the right tool.
+- Understand Lazy containers and recognize when it is the right tool.
+- Understand Rendering performance and recognize when it is the right tool.
+- Understand Common performance mistakes and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
 
 ---
 
@@ -2167,337 +1028,117 @@ After completing this module you should understand:
 
 ### Git
 
-Learn:
-
-- Organize commits by feature instead of file.
-- Maintain clean commit history.
-- Practice feature branch workflow.
-
-Practice:
-
-Build one feature per branch.
-
----
+- Use feature branches for each SwiftUI screen.
+- Make one commit per working preview.
+- Open a draft pull request for review practice.
 
 ### Xcode
 
-Learn:
-
-- Project organization.
-- Groups vs Folders.
-- Swift Packages.
-- Build settings for modular projects.
-
-Practice:
-
-Refactor a small project into a feature-based structure.
-
----
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
 
 ### Apple Documentation
 
-Read:
-
-- Observation Framework
-- Environment
-- Swift Packages
-- SwiftData integration
-
-Goal
-
-Understand Apple's recommendations for modern SwiftUI architecture.
-
----
+- Instruments Help
+- Debugging with Xcode
 
 ### WWDC
 
-Recommended Topics
-
-- Data Essentials in SwiftUI
-- Meet Observation
-- Structure your SwiftUI app
-- Organize your app for scalability
-
-Goal
-
-Learn how Apple structures production applications.
-
----
+- Instruments sessions
+- SwiftUI performance sessions when relevant
 
 ### Best Practices
 
-Learn:
-
-- Thin Views.
-- Business logic outside Views.
-- One responsibility per ViewModel.
-- Feature-first organization.
-- Dependency Injection instead of global state.
-- Keep architecture simple until complexity requires more.
-
-Avoid:
-
-- Massive Views.
-- Massive ViewModels.
-- Global mutable state.
-- Tight coupling.
-- Circular dependencies.
-
----
+- Prefer clarity when working with View identity.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
 
 ### Design Thinking
 
-Questions to ask:
-
-- Will another developer understand this structure?
-- Does this architecture reduce complexity?
-- Is every dependency necessary?
-
----
+- What problem does View identity solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
 
 ### Architecture Thinking
 
-Understand:
-
-Relationship between:
-
-- View
-- ViewModel
-- Model
-- Services
-- Repositories
-- Persistence
-- Networking
-
-Learn how information flows through the application.
-
----
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
 ### Open Source
 
-Study:
-
-A production-quality SwiftUI application.
-
-Observe:
-
-- Folder structure.
-- Dependency Injection.
-- Feature modules.
-- ViewModels.
-- Shared components.
-
-Ask:
-
-"What architectural decisions make this project scalable?"
-
----
+- Read a performance-related pull request
 
 ### AI
 
-Use AI to:
-
-- Review architecture.
-- Compare multiple designs.
-- Challenge coupling.
-- Explain trade-offs.
-
-Avoid:
-
-- Asking AI to design your architecture from scratch.
-
----
+- Ask AI to explain View identity after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
 ### English
 
-Vocabulary
-
-- Architecture
-- Dependency Injection
-- Coupling
-- Cohesion
-- Feature Module
-- Service
-- Repository
-- Maintainability
-- Scalability
-
-Practice:
-
-Explain your architecture to another developer.
-
----
+- Write a short explanation of View identity in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
 ### Notes
 
-Document:
-
-- Folder structure.
-- Dependency graph.
-- Architecture decisions.
-- Common mistakes.
-- Future improvements.
-
----
+- Document View identity, Equatable, Lazy containers, Rendering performance.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
 ### Reflection
 
-Ask yourself:
-
-- Would this architecture still work after 100 screens?
-- Could another developer understand this project?
-- Is the architecture solving a problem or adding complexity?
+- Can I teach View identity to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
 ---
 
 ## Mini Project
 
-Refactor one of your previous SwiftUI applications into a production-ready architecture.
-
-Requirements
-
-- Feature-based folders.
-- MVVM.
-- Dependency Injection.
-- Shared Components.
-- Reusable Services.
-- Proper Navigation.
-- Clean separation of responsibilities.
+- Profile a scrolling screen and fix one measurable SwiftUI performance issue.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
 
 ---
 
 ## Exit Criteria
 
-✓ Build scalable SwiftUI applications.
+You should be able to:
 
-✓ Apply MVVM correctly.
+- Use View identity correctly in a realistic scenario and explain the trade-offs.
+- Use Equatable correctly in a realistic scenario and explain the trade-offs.
+- Use Lazy containers correctly in a realistic scenario and explain the trade-offs.
+- Use Rendering performance correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
 
-✓ Organize projects professionally.
-
-✓ Understand dependency injection.
-
-✓ Explain architectural decisions confidently.
 
 ---
 
 # Phase Project
 
-Build a complete production-quality SwiftUI application.
-
-Suggested ideas:
-
-- Habit Tracker
-- Expense Tracker
-- Notes Application
-- Weather Application
-- Recipe Application
-- Fitness Tracker
-
-Requirements
-
-### UI
-
-- Adaptive Layout
-- Dark Mode
-- Dynamic Type
-- Accessibility
-- Localization
-- Reusable Components
-
-### Architecture
-
-- MVVM
-- Feature-based structure
-- Dependency Injection
-- Shared Components
-
-### Navigation
-
-- NavigationStack
-- Sheets
-- Alerts
-- Deep-link ready architecture
-
-### State Management
-
-- Correct property wrappers
-- Single Source of Truth
-- Predictable data flow
-
-### Performance
-
-- Lazy Containers
-- Rendering optimization
-- Instruments profiling
-
-### User Experience
-
-- Smooth animations
-- Gestures
-- Loading states
-- Error states
-- Empty states
-
-### Quality
-
-- Apple Human Interface Guidelines
-- SwiftLint (optional)
-- Meaningful Git history
-- Documentation
-- Reflection document
+Build a production-quality SwiftUI application that includes: - Multiple screens - NavigationStack - Forms - Lists - State management - Custom reusable components - Animations - Accessibility support Document: - UI decisions - State management decisions - Reusable components - Trade-offs ------------------------------------------------------------------------
 
 ---
 
 # Exit Criteria
 
-You can confidently:
+You are ready for the next phase when you can:
 
-✓ Build complete SwiftUI applications.
-
-✓ Choose the correct property wrapper.
-
-✓ Build reusable UI components.
-
-✓ Design adaptive layouts.
-
-✓ Build scalable navigation.
-
-✓ Optimize SwiftUI performance.
-
-✓ Build accessible applications.
-
-✓ Localize applications.
-
-✓ Apply MVVM correctly.
-
-✓ Read Apple documentation independently.
-
-✓ Learn new SwiftUI APIs without tutorials.
-
----
-
-# Phase Reflection
-
-Before moving to Phase 03, answer these questions:
-
-1. Can I build an entire SwiftUI application without following a tutorial?
-
-2. Can I explain why SwiftUI uses a declarative approach?
-
-3. Can I choose the correct property wrapper without guessing?
-
-4. Can I identify performance problems using Instruments?
-
-5. Can I organize a SwiftUI project that another developer can easily understand?
-
-6. Am I relying on AI to write code, or using it to improve my understanding?
-
-7. Have I built at least three complete SwiftUI applications?
-
-If the answer to any question is **No**, revisit the relevant module before continuing.
+- Design maintainable SwiftUI interfaces.
+- Select the correct state management solution.
+- Build reusable UI components.
+- Navigate complex applications.
+- Debug SwiftUI layout and state issues.
+- Follow Apple's Human Interface Guidelines.
 
 ---
 
 # Next Phase
 
-➡️ **Phase 03 — Apple Frameworks**
+➡️ Phase 03 — Apple Frameworks

@@ -215,11 +215,11 @@ They never stop.
 
 # Roadmap Structure
 
-The roadmap is divided into six phases.
+The roadmap is divided into fourteen phases (Phase 00 through Phase 13).
 
 Each phase contains multiple modules.
 
-Each module contains multiple lessons.
+Detailed module content lives in the `roadmap/phase-*.md` files.
 
 ```
 Roadmap
@@ -268,51 +268,35 @@ Next Module
 Every module follows the same structure.
 
 ```
-Overview
+Core Topics
 
 ↓
 
-Goal
+Learning Objectives
 
 ↓
 
-Prerequisites
+Parallel Learning Layers
+  - Git
+  - Xcode
+  - Apple Documentation
+  - WWDC
+  - Best Practices
+  - Design Thinking
+  - Architecture Thinking
+  - Open Source
+  - AI
+  - English
+  - Notes
+  - Reflection
 
 ↓
 
-Lessons
-
-↓
-
-Parallel Layers
-
-↓
-
-Resources
-
-↓
-
-Challenge
-
-↓
-
-Lab
-
-↓
-
-Engineering Review
-
-↓
-
-Interview Check
+Mini Project
 
 ↓
 
 Exit Criteria
-
-↓
-
-Reflection
 ```
 
 ---
@@ -401,849 +385,319 @@ What's Next
 
 # Phase Overview
 
-The roadmap contains six major phases.
+The roadmap contains fourteen phases, from Phase 00 through Phase 13.
 
-Detailed phase breakdown begins in the next section.
+Detailed module content lives in the phase files under `roadmap/`.
+This overview is the agreed learning order and module inventory.
 
 ```
-Phase 1
-Swift Engineering Foundations
+Phase 00 — Engineering Foundation
 
 ↓
 
-Phase 2
-SwiftUI Foundations
+Phase 01 — Swift Mastery
 
 ↓
 
-Phase 3
-iOS Engineering
+Phase 02 — SwiftUI Mastery
 
 ↓
 
-Phase 4
-Software Engineering
+Phase 03 — Apple Frameworks
 
 ↓
 
-Phase 5
-Production Engineering
+Phase 04 — Professional App Architecture
 
 ↓
 
-Phase 6
-Senior iOS Engineering
+Phase 05 — Networking & Data
+
+↓
+
+Phase 06 — Testing
+
+↓
+
+Phase 07 — Performance & Debugging
+
+↓
+
+Phase 08 — Security
+
+↓
+
+Phase 09 — System Design
+
+↓
+
+Phase 10 — Production Engineering
+
+↓
+
+Phase 11 — Open Source & Code Reading
+
+↓
+
+Phase 12 — Apple Ecosystem
+
+↓
+
+Phase 13 — Product & Business Engineering
 ```
 
 ---
 
-# Phase 1 — Swift Engineering Foundations
+# Phase 00 — Engineering Foundation
 
-> Goal: Build a deep understanding of the Swift language and develop strong programming fundamentals before learning iOS frameworks.
+> Details: [`phase-00-engineering-foundation.md`](./phase-00-engineering-foundation.md)
 
----
+**Purpose:** Build the engineering habits, workflow, and tools that will support every later phase.
 
-## Module 1 — Swift Fundamentals
+### Modules
 
-### Goal
-
-Learn the core syntax and concepts that every Swift developer uses daily.
-
-### Lessons
-
-- Variables & Constants
-- Types & Type Inference
-- Operators
-- Control Flow
-- Functions
-- Collections (Array, Set, Dictionary)
-- Optionals
-
-### Lab
-
-- Command Line Habit Tracker
-
-### Challenge
-
-- Swift Fundamentals Challenge
-
-### Capstone
-
-- Build a Command Line Productivity App
+- Module 0.1 — Engineering Mindset
+- Module 0.2 — Git Foundations
+- Module 0.3 — Xcode Fundamentals
+- Module 0.4 — Documentation & Research
+- Module 0.5 — Debugging Basics
+- Module 0.6 — Engineering Notes
 
 ---
 
-## Module 2 — Modeling Data
+# Phase 01 — Swift Mastery
 
-### Goal
+> Details: [`phase-01-swift-mastery.md`](./phase-01-swift-mastery.md)
 
-Understand how Swift models real-world data.
+**Purpose:** Master the Swift language deeply before focusing on advanced frameworks. Build strong fundamentals that support every future phase.
 
-### Lessons
+### Modules
 
-- Structures
-- Classes
-- Enumerations
-- Properties
-- Methods
-- Initializers
-- Value vs Reference Semantics
-
-### Lab
-
-- Expense Tracker Domain Model
-
-### Challenge
-
-- Data Modeling Challenge
-
-### Capstone
-
-- Design a Small Business Domain
+- Module 1 — Swift Basics
+- Module 2 — Collections & Optionals
+- Module 3 — Structs, Classes & Enums
+- Module 4 — Memory Management
+- Module 5 — Protocol-Oriented Programming
+- Module 6 — Generics
+- Module 7 — Error Handling
+- Module 8 — Concurrency
 
 ---
 
-## Module 3 — Protocol-Oriented Swift
+# Phase 02 — SwiftUI Mastery
 
-### Goal
+> Details: [`phase-02-swiftui-mastery.md`](./phase-02-swiftui-mastery.md)
 
-Write reusable, flexible and maintainable code.
+**Purpose:** Learn SwiftUI by understanding how it works internally and how to build maintainable, production-quality user interfaces.
 
-### Lessons
+### Modules
 
-- Protocols
-- Extensions
-- Protocol Composition
-- Generics
-- Associated Types
-- Opaque Types (`some`)
-- Existentials (`any`)
-
-### Lab
-
-- Reusable Components Library
-
-### Challenge
-
-- Generic Programming Challenge
-
-### Capstone
-
-- Build a Small Swift Package
+- Module 1 — SwiftUI Fundamentals
+- Module 2 — Layout System
+- Module 3 — State Management
+- Module 4 — Navigation
+- Module 5 — Lists & Forms
+- Module 6 — Custom Components
+- Module 7 — Animation
+- Module 8 — Accessibility
+- Module 9 — Performance
 
 ---
 
-## Module 4 — Memory & Concurrency
+# Phase 03 — Apple Frameworks
 
-### Goal
+> Details: [`phase-03-apple-frameworks.md`](./phase-03-apple-frameworks.md)
 
-Understand memory management and modern Swift concurrency.
+**Purpose:** Learn Apple's frameworks by solving real-world problems instead of studying APIs in isolation.
 
-### Lessons
+### Modules
 
-- ARC
-- Strong, Weak & Unowned References
-- Closures
-- Escaping Closures
-- async/await
-- Tasks
-- Task Groups
-- Actors
-- MainActor
-- Sendable
-
-### Lab
-
-- Image Downloader
-
-### Challenge
-
-- Concurrency Challenge
-
-### Capstone
-
-- Concurrent File Downloader
+- Module 1 — Foundation Framework
+- Module 2 — Persistence
+- Module 3 — Networking Foundation
+- Module 4 — Media Frameworks
+- Module 5 — Location & Maps
+- Module 6 — Notifications
+- Module 7 — Background Work
+- Module 8 — Widgets & App Intents
+- Module 9 — Cloud & Purchases
 
 ---
 
-## Module 5 — Swift Engineering
+# Phase 04 — Professional App Architecture
 
-### Goal
+> Details: [`phase-04-professional-app-architecture.md`](./phase-04-professional-app-architecture.md)
 
-Combine all Swift knowledge to write production-quality code.
+**Purpose:** Move from writing working code to designing maintainable systems.
 
-### Lessons
+### Modules
 
-- Error Handling
-- Result Type
-- Codable
-- Property Wrappers
-- Key Paths
-- Standard Library Deep Dive
-- API Design Guidelines
-- Performance Basics
-- Debugging Basics
-- Refactoring Fundamentals
-
-### Lab
-
-- JSON Processing Library
-
-### Challenge
-
-- Production Swift Challenge
-
-### Capstone
-
-- Build a Reusable Swift Framework
+- Module 1 — Project Organization
+- Module 2 — MVVM
+- Module 3 — Dependency Injection
+- Module 4 — SOLID Principles
+- Module 5 — Clean Architecture
+- Module 6 — Modularization
+- Module 7 — Tuist
+- Module 8 — Architecture Decision Making
 
 ---
 
-# Phase 2 — SwiftUI Foundations
+# Phase 05 — Networking & Data
 
-> Goal: Learn to build modern Apple user interfaces using SwiftUI while applying the Swift knowledge gained in Phase 1.
+> Details: [`phase-05-networking-and-data.md`](./phase-05-networking-and-data.md)
 
----
+**Purpose:** Learn how production iOS applications communicate with servers, store data, and provide a reliable user experience even without an internet connection.
 
-## Module 1 — SwiftUI Basics
+### Modules
 
-Lessons
-
-- Views
-- Modifiers
-- Layout System
-- Stacks
-- Spacer
-- Frame
-- Safe Area
-- View Lifecycle
-
-Lab
-
-- Personal Profile Screen
-
-Challenge
-
-- SwiftUI Basics Challenge
-
-Capstone
-
-- Multi-Screen Demo App
+- Module 1 — Networking Fundamentals
+- Module 2 — URLSession
+- Module 3 — Codable & JSON
+- Module 4 — Error Handling
+- Module 5 — Authentication
+- Module 6 — Local Persistence
+- Module 7 — Caching & Offline-First
+- Module 8 — Repository Pattern
 
 ---
 
-## Module 2 — State Management
+# Phase 06 — Testing
 
-Lessons
+> Details: [`phase-06-testing.md`](./phase-06-testing.md)
 
-- @State
-- @Binding
-- @Observable
-- Environment
-- EnvironmentObject
-- Observation
-- Data Flow
+**Purpose:** Learn to build reliable, maintainable software through automated testing. Testing is a core engineering skill, not an afterthought.
 
-Lab
+### Modules
 
-- Counter Application
-
-Challenge
-
-- State Management Challenge
-
-Capstone
-
-- Habit Tracker UI
+- Module 1 — Testing Fundamentals
+- Module 2 — Unit Testing
+- Module 3 — Test Doubles
+- Module 4 — Testable Architecture
+- Module 5 — Integration Testing
+- Module 6 — UI Testing
+- Module 7 — Test-Driven Development (TDD)
+- Module 8 — Snapshot & Performance Testing
 
 ---
 
-## Module 3 — Navigation
+# Phase 07 — Performance & Debugging
 
-Lessons
+> Details: [`phase-07-performance-and-debugging.md`](./phase-07-performance-and-debugging.md)
 
-- NavigationStack
-- NavigationPath
-- Sheets
-- Full Screen Covers
-- Alerts
-- Confirmation Dialogs
-- Deep Linking Basics
+**Purpose:** Learn to find, understand, and fix performance, memory, rendering, and runtime issues using professional engineering tools.
 
-Lab
+### Modules
 
-- Multi-Screen Navigation App
-
-Challenge
-
-- Navigation Challenge
-
-Capstone
-
-- Small Shopping App
+- Module 1 — Debugging Mindset
+- Module 2 — Instruments
+- Module 3 — Memory Management
+- Module 4 — SwiftUI Performance
+- Module 5 — Performance Optimization
+- Module 6 — Crash Analysis
 
 ---
 
-## Module 4 — Lists & Forms
+# Phase 08 — Security
 
-Lessons
+> Details: [`phase-08-security.md`](./phase-08-security.md)
 
-- List
-- Section
-- Form
-- Swipe Actions
-- Search
-- Refreshable
-- Context Menus
+**Purpose:** Learn to build secure iOS applications that protect user data, defend against common threats, and follow Apple's security recommendations.
 
-Lab
+### Modules
 
-- Task Manager
-
-Challenge
-
-- CRUD UI Challenge
-
-Capstone
-
-- Notes Application
+- Module 1 — Security Fundamentals
+- Module 2 — Secure Storage
+- Module 3 — Authentication & Authorization
+- Module 4 — Secure Networking
+- Module 5 — Privacy
+- Module 6 — Secure Coding
 
 ---
 
-## Module 5 — Animation & Custom Components
+# Phase 09 — System Design
 
-Lessons
+> Details: [`phase-09-system-design.md`](./phase-09-system-design.md)
 
-- Animation
-- Transition
-- GeometryReader
-- PreferenceKey
-- Custom Controls
-- Reusable Components
+**Purpose:** Learn to design software before writing code. This phase focuses on engineering decisions, trade-offs, scalability, and building systems that are easy to maintain and evolve.
 
-Lab
+### Modules
 
-- Animated Dashboard
-
-Challenge
-
-- Custom UI Challenge
-
-Capstone
-
-- Design System Demo
+- Module 1 — System Design Fundamentals
+- Module 2 — Domain Modeling
+- Module 3 — Feature Design
+- Module 4 — API & Data Flow Design
+- Module 5 — Scalability & Modularity
+- Module 6 — Engineering Decision Making
 
 ---
 
+# Phase 10 — Production Engineering
 
-# Phase 3 — iOS Engineering
+> Details: [`phase-10-production-engineering.md`](./phase-10-production-engineering.md)
 
-> Goal: Learn how production iOS applications are designed, built, tested, debugged, and maintained.
+**Purpose:** Learn everything required to build, ship, monitor, maintain, and continuously improve production-quality iOS applications.
 
----
+### Modules
 
-## Module 1 — App Architecture
-
-### Goal
-
-Understand how large iOS applications are organized.
-
-### Lessons
-
-- What is Architecture?
-- Separation of Concerns
-- SOLID Principles
-- MV Pattern
-- MVC
-- MVP
-- MVVM
-- Clean Architecture (Introduction)
-- Feature-Based Architecture
-- Modularization (Introduction)
-
-### Lab
-
-- Refactor a Small Application
-
-### Challenge
-
-- Architecture Selection Challenge
-
-### Capstone
-
-- Build a Modular Feature
+- Module 1 — Production Mindset
+- Module 2 — Build & Release
+- Module 3 — CI/CD
+- Module 4 — Analytics
+- Module 5 — Crash Reporting & Logging
+- Module 6 — Feature Flags & Configuration
+- Module 7 — Maintenance & Technical Debt
 
 ---
 
-## Module 2 — Networking
+# Phase 11 — Open Source & Code Reading
 
-### Goal
+> Details: [`phase-11-open-source-and-code-reading.md`](./phase-11-open-source-and-code-reading.md)
 
-Communicate with remote services using modern networking techniques.
+**Purpose:** Learn how to understand, evaluate, contribute to, and maintain real-world codebases. Great engineers spend as much time reading code as writing it.
 
-### Lessons
+### Modules
 
-- URLSession
-- HTTP Fundamentals
-- REST APIs
-- JSON
-- Codable Review
-- Request Building
-- Response Handling
-- Error Handling
-- Authentication
-- File Upload & Download
-- Pagination
-- Retry Strategies
-- Network Monitoring
-- Caching Basics
-
-### Lab
-
-- Movie Database App
-
-### Challenge
-
-- Networking Challenge
-
-### Capstone
-
-- Production Networking Layer
+- Module 1 — Reading Large Codebases
+- Module 2 — Code Reviews
+- Module 3 — Debugging Unfamiliar Projects
+- Module 4 — Contributing to Open Source
+- Module 5 — Maintaining Open Source
 
 ---
 
-## Module 3 — Local Persistence
+# Phase 12 — Apple Ecosystem
 
-### Goal
+> Details: [`phase-12-apple-ecosystem.md`](./phase-12-apple-ecosystem.md)
 
-Store, retrieve and synchronize application data.
+**Purpose:** Expand beyond iPhone development and learn how to build applications across Apple's platforms while understanding shared technologies and platform-specific design principles.
 
-### Lessons
+### Modules
 
-- FileManager
-- UserDefaults
-- Keychain
-- SQLite Fundamentals
-- Core Data
-- SwiftData
-- Data Migration
-- Offline First Basics
-- Repository Pattern
-
-### Lab
-
-- Offline Notes App
-
-### Challenge
-
-- Persistence Challenge
-
-### Capstone
-
-- Offline-First Application
+- Module 1 — Apple Ecosystem Overview
+- Module 2 — UIKit Interoperability
+- Module 3 — Widgets & App Intents
+- Module 4 — watchOS & visionOS
+- Module 5 — macOS & Catalyst
+- Module 6 — Multiplatform Engineering
 
 ---
 
-## Module 4 — Dependency Management
+# Phase 13 — Product & Business Engineering
 
-### Goal
+> Details: [`phase-13-product-and-business-engineering.md`](./phase-13-product-and-business-engineering.md)
 
-Build loosely coupled and maintainable applications.
+**Purpose:** Transform your engineering skills into successful products by learning product thinking, business fundamentals, and long-term product management. This phase is about building products people want, shipping them professionally, and continuously improving them.
 
-### Lessons
+### Modules
 
-- Dependency Injection
-- Constructor Injection
-- Protocol Injection
-- Composition Root
-- Factory Pattern
-- Service Locator (Why to Avoid)
-- Swift Package Manager
-- Package Design
-
-### Lab
-
-- Dependency Injection Playground
-
-### Challenge
-
-- DI Challenge
-
-### Capstone
-
-- Modular Service Layer
-
----
-
-## Module 5 — Testing
-
-### Goal
-
-Build confidence through automated testing.
-
-### Lessons
-
-- Testing Mindset
-- XCTest
-- Unit Testing
-- Test Doubles
-- Mocking
-- Integration Testing
-- UI Testing
-- Snapshot Testing
-- Testable Architecture
-- Test-Driven Development (Introduction)
-
-### Lab
-
-- Testing Existing Code
-
-### Challenge
-
-- Testing Challenge
-
-### Capstone
-
-- Fully Tested Feature
-
----
-
-## Module 6 — Debugging & Performance
-
-### Goal
-
-Find problems efficiently and optimize applications.
-
-### Lessons
-
-- LLDB Basics
-- Breakpoints
-- Debug Navigator
-- Memory Graph
-- Instruments Overview
-- Time Profiler
-- Leaks
-- Allocations
-- Performance Optimization
-- App Launch Performance
-
-### Lab
-
-- Debug a Broken App
-
-### Challenge
-
-- Performance Challenge
-
-### Capstone
-
-- Performance Optimization Project
-
----
-
-## Module 7 — UIKit Essentials
-
-### Goal
-
-Understand UIKit well enough to work on existing production applications.
-
-### Lessons
-
-- UIViewController Lifecycle
-- Auto Layout
-- UITableView
-- UICollectionView
-- UINavigationController
-- UITabBarController
-- Storyboards (Reading Existing Projects)
-- SwiftUI Interoperability
-- UIViewRepresentable
-- UIHostingController
-
-### Lab
-
-- UIKit Contacts App
-
-### Challenge
-
-- Legacy App Challenge
-
-### Capstone
-
-- Migrate UIKit Screen to SwiftUI
-
----
-
-# Phase 4 — Software Engineering
-
-> Goal: Learn to design maintainable software, make engineering decisions, and work effectively in professional teams.
-
----
-
-## Module 1 — Clean Code
-
-### Lessons
-
-- Naming
-- Functions
-- Classes & Structures
-- Comments
-- Error Handling
-- Code Smells
-- Refactoring
-- Readability
-
-Capstone
-
-- Refactor a Legacy Feature
-
----
-
-## Module 2 — Design Patterns
-
-### Lessons
-
-- Strategy
-- Factory
-- Builder
-- Adapter
-- Decorator
-- Observer
-- Command
-- Coordinator
-- Repository
-- Dependency Injection Pattern
-
-Capstone
-
-- Pattern Selection Project
-
----
-
-## Module 3 — Clean Architecture
-
-### Lessons
-
-- Layers
-- Entities
-- Use Cases
-- Interface Adapters
-- Dependency Rule
-- Feature Isolation
-- Modular Design
-
-Capstone
-
-- Build a Clean Architecture Feature
-
----
-
-## Module 4 — Domain-Driven Design
-
-### Lessons
-
-- Ubiquitous Language
-- Entities
-- Value Objects
-- Aggregates
-- Repositories
-- Domain Services
-- Application Services
-
-Capstone
-
-- Design a Business Domain
-
----
-
-## Module 5 — Legacy Code & Refactoring
-
-### Lessons
-
-- Reading Unknown Code
-- Safe Refactoring
-- Characterization Tests
-- Incremental Improvements
-- Technical Debt
-
-Capstone
-
-- Modernize an Existing Project
-
----
-
-## Module 6 — Team Engineering
-
-### Lessons
-
-- Code Reviews
-- Git Workflows
-- Pull Requests
-- Technical Discussions
-- Documentation
-- Estimation
-- Mentoring
-- Communication
-
-Capstone
-
-- Simulated Team Project
-
----
-
-# Phase 5 — Production Engineering
-
-> Goal: Build applications that are ready for real users and the App Store.
-
----
-
-## Module 1 — Production Apps
-
-### Lessons
-
-- Project Structure
-- Configuration
-- Build Settings
-- Environment Management
-- Feature Flags
-
----
-
-## Module 2 — App Quality
-
-### Lessons
-
-- Accessibility
-- Localization
-- Error Reporting
-- Analytics
-- Logging
-- Monitoring
-- Privacy
-
----
-
-## Module 3 — CI/CD
-
-### Lessons
-
-- GitHub Actions
-- Fastlane
-- Automated Testing
-- Build Pipelines
-- Release Pipelines
-
----
-
-## Module 4 — App Store
-
-### Lessons
-
-- App Store Connect
-- TestFlight
-- Release Strategy
-- Screenshots
-- Metadata
-- ASO Basics
-
----
-
-## Module 5 — Open Source
-
-### Lessons
-
-- Reading Large Repositories
-- Understanding Architecture
-- Debugging Other People's Code
-- First Contribution
-- Creating Swift Packages
-- Maintaining Open Source
-
-Capstone
-
-- Publish an Open Source Swift Package
-
----
-
-## Module 6 — AI Engineering
-
-### Lessons
-
-- AI-Assisted Development
-- Prompt Engineering for Developers
-- Code Review with AI
-- AI Limitations
-- Building AI Features
-- Local Models
-- API-Based AI
-- Responsible AI Usage
-
-Capstone
-
-- Add AI to an Existing App
-
----
-
-# Phase 6 — Senior iOS Engineering
-
-> Goal: Think like a senior engineer rather than simply writing code.
-
----
-
-## Module 1 — System Design
-
-### Lessons
-
-- Scalability
-- Caching
-- Synchronization
-- Offline Systems
-- Push Notifications
-- Background Processing
-- Large Application Design
-
----
-
-## Module 2 — Engineering Leadership
-
-### Lessons
-
-- Decision Making
-- Technical Vision
-- Trade-Off Analysis
-- Risk Management
-- Long-Term Thinking
-- Architecture Reviews
-
----
-
-## Module 3 — Product Thinking
-
-### Lessons
-
-- User Problems
-- Product Discovery
-- MVP Design
-- Prioritization
-- Metrics
-- Feedback Loops
-
----
-
-## Module 4 — Personal Engineering System
-
-### Lessons
-
-- Learning Systems
-- Continuous Improvement
-- Knowledge Management
-- Building a Public Portfolio
-- Technical Writing
-- Career Planning
-
-Capstone
-
-- Build Your Own Engineering Playbook
+- Module 1 — Product Thinking
+- Module 2 — MVP Planning
+- Module 3 — Shipping to the App Store
+- Module 4 — Analytics & User Feedback
+- Module 5 — Monetization
+- Module 6 — Marketing & Personal Brand
+- Module 7 — Long-Term Product Management
 
 ---
 

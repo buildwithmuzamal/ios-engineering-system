@@ -1,121 +1,722 @@
-# Phase 07 --- Performance & Debugging
+# Phase 07 — Performance & Debugging
 
-> Purpose: Learn to find, understand, and fix performance, memory,
-> rendering, and runtime issues using professional engineering tools.
+> **Purpose:** Learn to find, understand, and fix performance, memory, > rendering, and runtime issues using professional engineering tools.
+
+---
 
 # Goal
 
-Build applications that are not only correct, but fast, responsive,
-memory efficient, and easy to debug.
+Build applications that are not only correct, but fast, responsive, memory efficient, and easy to debug.
+
+---
 
 # Learning Outcomes
 
--   Profile apps with Instruments.
--   Diagnose memory leaks.
--   Optimize SwiftUI rendering.
--   Debug complex production issues.
--   Measure before optimizing.
+By the end of this phase you should be able to:
 
-------------------------------------------------------------------------
+- Profile apps with Instruments.
+- Diagnose memory leaks.
+- Optimize SwiftUI rendering.
+- Debug complex production issues.
+- Measure before optimizing.
 
-# Module 1 --- Debugging Mindset
+---
 
-## Core Topic
+# Module 1 — Debugging Mindset
 
--   Reproduce bugs
--   Isolate root cause
--   Form hypotheses
--   Verify fixes
+## Core Topics
 
-### Parallel Learning Layers
+- Reproduce bugs
+- Isolate root cause
+- Form hypotheses
+- Verify fixes
 
-**Git** - `git bisect` introduction - Use branches for bug fixes
+---
 
-**Xcode** - Breakpoints - Conditional breakpoints - LLDB basics - Debug
-Navigator
+## Learning Objectives
 
-**Apple Documentation** - Debugging guide
+After completing this module you should be able to:
 
-**WWDC** - Debugging sessions
+- Understand Reproduce bugs and recognize when it is the right tool.
+- Understand Isolate root cause and recognize when it is the right tool.
+- Understand Form hypotheses and recognize when it is the right tool.
+- Understand Verify fixes and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+- Builds on Phase 00 Debugging Basics and Phase 02 Performance. Focus on professional debugging process.
 
-**Best Practices** - Fix root causes, not symptoms.
+---
 
-**Design Thinking** - Why reproducible bugs matter.
+## Parallel Learning Layers
 
-**Architecture Thinking** - How architecture affects debugging.
+### Git
 
-**Open Source** - Read a bug fix PR.
+- Use git bisect to find performance regressions.
+- Branch for profiling experiments.
+- Document measured improvements in commit messages.
 
-**AI** - Use AI to analyze logs and hypotheses.
+### Xcode
 
-**English** - Bug report, regression, stack trace, crash.
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
 
-**Notes** - Debugging checklist.
+### Apple Documentation
 
-**Reflection** - What led to the bug?
+- Instruments Help
+- Debugging with Xcode
 
-------------------------------------------------------------------------
+### WWDC
 
-# Module 2 --- Instruments
+- Instruments sessions
+- SwiftUI performance sessions when relevant
 
-Core: - Time Profiler - Allocations - Leaks - Memory Graph - Signposts
+### Best Practices
 
-Layers: - Git: Tag optimization commits. - Xcode: Launch Instruments. -
-Apple Docs: Instruments. - Practice: Profile an existing app.
+- Prefer clarity when working with Reproduce bugs.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
 
-------------------------------------------------------------------------
+### Design Thinking
 
-# Module 3 --- Memory Management
+- What problem does Reproduce bugs solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
 
-Core: - Retain cycles - Heap vs Stack review - ARC review - Memory Graph
+### Architecture Thinking
 
-Layers: - Best Practices: Weak vs unowned. - Design Thinking:
-Ownership. - Practice: Remove leaks.
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
 
-------------------------------------------------------------------------
+### Open Source
 
-# Module 4 --- SwiftUI Performance
+- Read a performance-related pull request
 
-Core: - View identity - Lazy containers - Equatable - Rendering - State
-updates
+### AI
 
-Layers: - Apple Docs - WWDC SwiftUI performance - Practice: Optimize a
-scrolling screen.
+- Ask AI to explain Reproduce bugs after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
 
-------------------------------------------------------------------------
+### English
 
-# Module 5 --- Performance Optimization
+- Write a short explanation of Reproduce bugs in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
 
-Core: - Startup time - Image loading - Network efficiency - Background
-work
+### Notes
 
-Layers: - Architecture Thinking: Measure before optimizing. - AI:
-Compare optimization options. - Practice: Improve a real feature.
+- Document Reproduce bugs, Isolate root cause, Form hypotheses, Verify fixes.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
 
-------------------------------------------------------------------------
+### Reflection
 
-# Module 6 --- Crash Analysis
+- Can I teach Reproduce bugs to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
 
-Core: - Crash logs - Symbolication - Assertions - Preconditions
+---
 
-Layers: - Git: Link fixes to issues. - English: Write a bug report. -
-Reflection: Prevention strategies.
+## Mini Project
 
-------------------------------------------------------------------------
+- Build a small focused exercise that proves you understand Reproduce bugs.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Reproduce bugs correctly in a realistic scenario and explain the trade-offs.
+- Use Isolate root cause correctly in a realistic scenario and explain the trade-offs.
+- Use Form hypotheses correctly in a realistic scenario and explain the trade-offs.
+- Use Verify fixes correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 2 — Instruments
+
+## Core Topics
+
+- Time Profiler - Allocations - Leaks - Memory Graph - Signposts
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand Time Profiler - Allocations - Leaks - Memory Graph - Signposts and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Use git bisect to find performance regressions.
+- Branch for profiling experiments.
+- Document measured improvements in commit messages.
+
+### Xcode
+
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
+
+### Apple Documentation
+
+- Instruments Help
+- Debugging with Xcode
+
+### WWDC
+
+- Instruments sessions
+- SwiftUI performance sessions when relevant
+
+### Best Practices
+
+- Prefer clarity when working with Time Profiler - Allocations - Leaks - Memory Graph - Signposts.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does Time Profiler - Allocations - Leaks - Memory Graph - Signposts solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Read a performance-related pull request
+
+### AI
+
+- Ask AI to explain Time Profiler - Allocations - Leaks - Memory Graph - Signposts after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of Time Profiler - Allocations - Leaks - Memory Graph - Signposts in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document Time Profiler - Allocations - Leaks - Memory Graph - Signposts.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach Time Profiler - Allocations - Leaks - Memory Graph - Signposts to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Profile an existing app.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Time Profiler - Allocations - Leaks - Memory Graph - Signposts correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 3 — Memory Management
+
+## Core Topics
+
+- Retain cycles - Heap vs Stack review - ARC review - Memory Graph
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand Retain cycles - Heap vs Stack review - ARC review - Memory Graph and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Use git bisect to find performance regressions.
+- Branch for profiling experiments.
+- Document measured improvements in commit messages.
+
+### Xcode
+
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
+
+### Apple Documentation
+
+- Instruments Help
+- Debugging with Xcode
+
+### WWDC
+
+- Instruments sessions
+- SwiftUI performance sessions when relevant
+
+### Best Practices
+
+- Prefer clarity when working with Retain cycles - Heap vs Stack review - ARC review - Memory Graph.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does Retain cycles - Heap vs Stack review - ARC review - Memory Graph solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Read a performance-related pull request
+
+### AI
+
+- Ask AI to explain Retain cycles - Heap vs Stack review - ARC review - Memory Graph after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of Retain cycles - Heap vs Stack review - ARC review - Memory Graph in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document Retain cycles - Heap vs Stack review - ARC review - Memory Graph.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach Retain cycles - Heap vs Stack review - ARC review - Memory Graph to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Remove leaks.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Retain cycles - Heap vs Stack review - ARC review - Memory Graph correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 4 — SwiftUI Performance
+
+## Core Topics
+
+- View identity - Lazy containers - Equatable - Rendering - State
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand View identity - Lazy containers - Equatable - Rendering - State and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+- Deepens Phase 02 Performance with Instruments-backed SwiftUI optimization.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Use git bisect to find performance regressions.
+- Branch for profiling experiments.
+- Document measured improvements in commit messages.
+
+### Xcode
+
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
+
+### Apple Documentation
+
+- Instruments Help
+- Debugging with Xcode
+
+### WWDC
+
+- Instruments sessions
+- SwiftUI performance sessions when relevant
+
+### Best Practices
+
+- Prefer clarity when working with View identity - Lazy containers - Equatable - Rendering - State.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does View identity - Lazy containers - Equatable - Rendering - State solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Read a performance-related pull request
+
+### AI
+
+- Ask AI to explain View identity - Lazy containers - Equatable - Rendering - State after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of View identity - Lazy containers - Equatable - Rendering - State in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document View identity - Lazy containers - Equatable - Rendering - State.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach View identity - Lazy containers - Equatable - Rendering - State to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Optimize a scrolling screen.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use View identity - Lazy containers - Equatable - Rendering - State correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 5 — Performance Optimization
+
+## Core Topics
+
+- Startup time - Image loading - Network efficiency - Background
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand Startup time - Image loading - Network efficiency - Background and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Use git bisect to find performance regressions.
+- Branch for profiling experiments.
+- Document measured improvements in commit messages.
+
+### Xcode
+
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
+
+### Apple Documentation
+
+- Instruments Help
+- Debugging with Xcode
+
+### WWDC
+
+- Instruments sessions
+- SwiftUI performance sessions when relevant
+
+### Best Practices
+
+- Prefer clarity when working with Startup time - Image loading - Network efficiency - Background.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does Startup time - Image loading - Network efficiency - Background solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Read a performance-related pull request
+
+### AI
+
+- Ask AI to explain Startup time - Image loading - Network efficiency - Background after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of Startup time - Image loading - Network efficiency - Background in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document Startup time - Image loading - Network efficiency - Background.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach Startup time - Image loading - Network efficiency - Background to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Improve a real feature.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Startup time - Image loading - Network efficiency - Background correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
+
+# Module 6 — Crash Analysis
+
+## Core Topics
+
+- Crash logs - Symbolication - Assertions - Preconditions
+
+---
+
+## Learning Objectives
+
+After completing this module you should be able to:
+
+- Understand Crash logs - Symbolication - Assertions - Preconditions and recognize when it is the right tool.
+- Apply the module concepts in the mini project without copying a full solution.
+- Use official documentation as the primary reference for this module.
+
+---
+
+## Parallel Learning Layers
+
+### Git
+
+- Use git bisect to find performance regressions.
+- Branch for profiling experiments.
+- Document measured improvements in commit messages.
+
+### Xcode
+
+- Instruments launch
+- Memory Graph
+- Time Profiler
+- Debug Navigator
+
+### Apple Documentation
+
+- Instruments Help
+- Debugging with Xcode
+
+### WWDC
+
+- Instruments sessions
+- SwiftUI performance sessions when relevant
+
+### Best Practices
+
+- Prefer clarity when working with Crash logs - Symbolication - Assertions - Preconditions.
+- Keep responsibilities small and names meaningful.
+- Validate understanding with a working example before moving on.
+
+### Design Thinking
+
+- What problem does Crash logs - Symbolication - Assertions - Preconditions solve?
+- What would a simpler alternative look like?
+- What trade-offs appear if this is overused?
+
+### Architecture Thinking
+
+- Where does this concept belong in a production app?
+- What should stay out of the UI layer?
+- How would this decision affect testing and change later?
+
+### Open Source
+
+- Read a performance-related pull request
+
+### AI
+
+- Ask AI to explain Crash logs - Symbolication - Assertions - Preconditions after you attempt it yourself.
+- Request a review of your design, not a full generated solution.
+- Challenge AI suggestions against Apple documentation.
+
+### English
+
+- Write a short explanation of Crash logs - Symbolication - Assertions - Preconditions in your own words.
+- Use precise terminology in notes and commit messages.
+- Practice explaining trade-offs as you would in a pull request.
+
+### Notes
+
+- Document Crash logs - Symbolication - Assertions - Preconditions.
+- Capture common mistakes and Apple recommendations.
+- Link related modules and future spiral topics.
+
+### Reflection
+
+- Can I teach Crash logs - Symbolication - Assertions - Preconditions to another engineer?
+- What is still unclear?
+- How does this connect to previous phases?
+
+---
+
+## Mini Project
+
+- Build a small focused exercise that proves you understand Crash logs - Symbolication - Assertions - Preconditions.
+- Keep the scope small enough to finish, but realistic enough to reuse later.
+- Document one design decision and one mistake you corrected.
+
+---
+
+## Exit Criteria
+
+You should be able to:
+
+- Use Crash logs - Symbolication - Assertions - Preconditions correctly in a realistic scenario and explain the trade-offs.
+- Finish the mini project and describe one design decision you made.
+- Write permanent notes covering the core topics, mistakes, and Apple guidance.
+- Meet every Learning Objective for this module.
+
+
+---
 
 # Phase Project
 
-Take one previous application and: - Profile with Instruments - Remove
-memory leaks - Improve launch time - Optimize one SwiftUI screen - Fix
-at least three real bugs - Document every optimization and its measured
-impact
+Take one previous application and: - Profile with Instruments - Remove memory leaks - Improve launch time - Optimize one SwiftUI screen - Fix at least three real bugs - Document every optimization and its measured impact
+
+---
 
 # Exit Criteria
 
-You can: - Debug confidently. - Use Instruments effectively. - Explain
-performance bottlenecks. - Optimize based on evidence. - Read crash
-reports.
+You are ready for the next phase when you can:
+
+- Debug confidently.
+- Use Instruments effectively.
+- Explain performance bottlenecks.
+- Optimize based on evidence.
+- Read crash reports.
+
+---
 
 # Next Phase
 
-➡️ Phase 08 --- Security
+➡️ Phase 08 — Security
