@@ -1,746 +1,901 @@
-# iOS Engineering System Roadmap
+# iOS Engineering Knowledge Map (Zero → Top 1% iOS Engineer)
 
-> **Version:** 1.0.0
->
-> This roadmap is the single source of truth for the iOS Engineering System repository.
->
-> It defines **what to learn**, **why to learn it**, and **when to learn it**.
->
-> The roadmap is **mastery-based**, not time-based.
+> **Purpose:** This is a master list of topics to learn. It is **not** a learning order. Pick one topic at a time and study it deeply.
 
 ---
 
-# Vision
+# 00. Computer Science Fundamentals
 
-The goal of this repository is **not** to memorize Swift syntax or complete tutorials.
-
-The goal is to become an engineer who can:
-
-- Design software
-- Build production-quality applications
-- Read and understand large codebases
-- Make good engineering decisions
-- Learn new technologies independently
-- Contribute to open source
-- Build products and businesses
-
-This repository focuses on long-term engineering skills rather than short-term interview preparation.
-
----
-
-# Learning Philosophy
-
-## Foundation First
-
-Everything in this roadmap builds on strong fundamentals.
-
-We do **not** skip fundamentals simply because they look easy.
-
-A weak foundation always becomes a problem later.
+- How Computers Work
+- Binary
+- CPU
+- RAM
+- Storage
+- Operating Systems
+- Processes
+- Threads
+- Networking Basics
+- Internet
+- HTTP
+- HTTPS
+- DNS
+- IP Address
+- TCP
+- UDP
+- Data Structures
+- Algorithms
+- Time Complexity
+- Space Complexity
 
 ---
 
-## Learn by Building
+# 01. macOS
 
-Every important concept should eventually be used in a project.
-
-Learning does not end after watching a video or reading documentation.
-
-A concept is considered learned only after it has been implemented.
-
----
-
-## Mastery Over Speed
-
-There are no deadlines.
-
-There are no weekly targets.
-
-Progress is based on mastery.
-
-Do not move to the next lesson until you can confidently explain and use the current one.
+- Finder
+- File System
+- Terminal
+- Shell
+- Environment Variables
+- Homebrew
+- Permissions
+- Keyboard Shortcuts
 
 ---
 
-## Context Before Complexity
+# 02. Git
 
-Advanced concepts should only be introduced after the problems they solve become visible.
-
-Example:
-
-- Learn Protocols before Dependency Injection.
-- Learn Dependency Injection before Clean Architecture.
-- Learn Concurrency before advanced networking.
-
-Every topic must answer:
-
-> **"Why does this exist?"**
-
-before answering:
-
-> **"How does it work?"**
-
----
-
-## Build Mental Models
-
-The objective is to understand systems rather than memorize APIs.
-
-Whenever possible:
-
-- understand the problem
-- understand the trade-offs
-- understand why Apple designed something this way
+- Version Control
+- Repository
+- Clone
+- Commit
+- Branch
+- Merge
+- Rebase
+- Cherry Pick
+- Reset
+- Revert
+- Stash
+- Tag
+- Remote
+- Pull Request
+- Conflict Resolution
+- GitHub
 
 ---
 
-## Official Sources First
+# 03. Xcode
 
-When learning a topic, follow this priority:
-
-1. Apple Documentation
-2. Swift Language Documentation
-3. WWDC Sessions
-4. Open Source Code
-5. Carefully selected books
-6. Carefully selected videos
-
-Whenever multiple resources disagree, prefer Apple's official documentation unless there is a strong engineering reason not to.
-
----
-
-# Learning Rules
-
-The following rules apply throughout the entire roadmap.
-
-## Rule 1
-
-Understand before memorizing.
+- Workspace
+- Project
+- Target
+- Scheme
+- Build System
+- Build Configurations
+- Build Settings
+- Info.plist
+- Signing
+- Provisioning Profiles
+- Certificates
+- Simulator
+- Debugger
+- LLDB
+- Instruments
+- Swift Package Manager
+- Archive
+- Distribution
 
 ---
 
-## Rule 2
+# 04. Swift
 
-Read code every week.
+## Language Basics
 
----
+- Variables
+- Constants
+- Data Types
+- Operators
+- Control Flow
+- Functions
+- Closures
+- Optionals
+- Strings
+- Arrays
+- Sets
+- Dictionaries
+- Tuples
 
-## Rule 3
+## Object-Oriented Programming
 
-Build continuously.
+- Structures
+- Classes
+- Enumerations
+- Protocols
+- Extensions
+- Initializers
+- Deinitializers
+- Properties
+- Methods
+- Access Control
+- Inheritance
+- Polymorphism
 
-Learning without building is incomplete.
+## Advanced Swift
 
----
-
-## Rule 4
-
-Do not blindly copy code from AI.
-
-Always understand every line.
-
----
-
-## Rule 5
-
-Read official documentation regularly.
-
-Documentation is part of the learning process, not a last resort.
-
----
-
-## Rule 6
-
-Write permanent notes.
-
-Notes should explain concepts in your own words.
-
----
-
-## Rule 7
-
-Keep Git history clean.
-
-Every commit should have a clear purpose.
-
----
-
-## Rule 8
-
-Review your own code before considering a task complete.
+- Generics
+- Associated Types
+- Opaque Types
+- Existentials
+- Result Type
+- Error Handling
+- Pattern Matching
+- Key Paths
+- Property Wrappers
+- Result Builders
+- Macros
+- Regular Expressions
 
 ---
 
-## Rule 9
+# 05. Memory Management
 
-Prefer simplicity over cleverness.
-
-Readable code wins.
-
----
-
-## Rule 10
-
-Never chase technology trends without understanding the fundamentals first.
-
----
-
-# Parallel Learning Layers
-
-These layers continue throughout the entire roadmap.
-
-They never stop.
-
-| Layer | Purpose |
-|--------|---------|
-| Swift | Language mastery |
-| SwiftUI | UI development |
-| UIKit | Production understanding & legacy systems |
-| Git | Version control |
-| Xcode | IDE mastery |
-| Apple Documentation | Official knowledge |
-| WWDC | Best practices & latest APIs |
-| Software Design | API design, architecture, UI thinking |
-| Best Practices | Production-quality engineering |
-| Testing | Build reliable software |
-| Open Source | Reading and contributing |
-| AI | Use AI effectively without becoming dependent |
-| DSA | Engineering thinking and interview preparation |
-| English | Technical communication |
-| Notes | Build a permanent knowledge base |
-| Weekly Review | Prevent forgetting |
-| Engineering Review | Evaluate code quality |
+- Stack
+- Heap
+- Value Types
+- Reference Types
+- ARC
+- Retain Cycle
+- Weak References
+- Unowned References
+- Copy-on-Write
+- Ownership
+- Lifetime
+- Allocation
+- Deallocation
+- Memory Graph
 
 ---
 
-# Roadmap Structure
+# 06. Swift Concurrency
 
-The roadmap is divided into fourteen phases (Phase 00 through Phase 13).
-
-Each phase contains multiple modules.
-
-Detailed module content lives in the `roadmap/phase-*.md` files.
-
-```
-Roadmap
-
-↓
-
-Phase
-
-↓
-
-Module
-
-↓
-
-Lesson
-
-↓
-
-Mini Practice
-
-↓
-
-Challenge
-
-↓
-
-Lab
-
-↓
-
-Capstone
-
-↓
-
-Engineering Review
-
-↓
-
-Next Module
-```
+- Async/Await
+- Tasks
+- Task Groups
+- Actors
+- MainActor
+- Sendable
+- Isolation
+- Structured Concurrency
+- Cancellation
+- AsyncSequence
+- Continuations
+- Task Priorities
 
 ---
 
-# Module Structure
+# 07. SwiftUI
 
-Every module follows the same structure.
+## Fundamentals
 
-```
-Core Topics
+- Views
+- View Lifecycle
+- View Modifiers
+- Containers
+- Layout System
 
-↓
+## State Management
 
-Learning Objectives
+- State
+- Binding
+- Environment
+- Observation
+- Observable
+- PreferenceKey
 
-↓
+## Navigation
 
-Parallel Learning Layers
-  - Git
-  - Xcode
-  - Apple Documentation
-  - WWDC
-  - Best Practices
-  - Design Thinking
-  - Architecture Thinking
-  - Open Source
-  - AI
-  - English
-  - Notes
-  - Reflection
+- NavigationStack
+- NavigationPath
+- TabView
+- Sheets
+- Popovers
+- Alerts
 
-↓
+## UI
 
-Mini Project
+- Lists
+- Grids
+- Forms
+- Menus
+- Toolbars
+- Gestures
+- Animations
+- Transitions
+- Canvas
+- Shapes
+- Charts
 
-↓
+## Advanced
 
-Exit Criteria
-```
-
----
-
-# Lesson Structure
-
-Every lesson follows the same structure.
-
-```
-Overview
-
-↓
-
-Why This Matters
-
-↓
-
-Learning Objectives
-
-↓
-
-Main Concepts
-
-↓
-
-Best Practices
-
-↓
-
-Common Mistakes
-
-↓
-
-Official Resources
-
-↓
-
-Book References
-
-↓
-
-Xcode Layer
-
-↓
-
-Git Layer
-
-↓
-
-AI Layer
-
-↓
-
-Mini Practice
-
-↓
-
-Notes Task
-
-↓
-
-Engineering Review
-
-↓
-
-Interview Questions
-
-↓
-
-Reflection
-
-↓
-
-Exit Criteria
-
-↓
-
-Connections
-
-↓
-
-What's Next
-```
+- GeometryReader
+- Accessibility
+- Localization
+- Performance
+- Custom Layout
+- UIKit Integration
 
 ---
 
-# Phase Overview
+# 08. UIKit
 
-The roadmap contains fourteen phases, from Phase 00 through Phase 13.
-
-Detailed module content lives in the phase files under `roadmap/`.
-This overview is the agreed learning order and module inventory.
-
-```
-Phase 00 — Engineering Foundation
-
-↓
-
-Phase 01 — Swift Mastery
-
-↓
-
-Phase 02 — SwiftUI Mastery
-
-↓
-
-Phase 03 — Apple Frameworks
-
-↓
-
-Phase 04 — Professional App Architecture
-
-↓
-
-Phase 05 — Networking & Data
-
-↓
-
-Phase 06 — Testing
-
-↓
-
-Phase 07 — Performance & Debugging
-
-↓
-
-Phase 08 — Security
-
-↓
-
-Phase 09 — System Design
-
-↓
-
-Phase 10 — Production Engineering
-
-↓
-
-Phase 11 — Open Source & Code Reading
-
-↓
-
-Phase 12 — Apple Ecosystem
-
-↓
-
-Phase 13 — Product & Business Engineering
-```
+- UIView
+- UIViewController
+- View Lifecycle
+- Auto Layout
+- Storyboards
+- XIB
+- TableView
+- CollectionView
+- NavigationController
+- TabBarController
+- ScrollView
+- Gestures
+- Animations
+- UIKit + SwiftUI
 
 ---
 
-# Phase 00 — Engineering Foundation
+# 09. Architecture
 
-> Details: [`phase-00-engineering-foundation.md`](./phase-00-engineering-foundation.md)
-
-**Purpose:** Build the engineering habits, workflow, and tools that will support every later phase.
-
-### Modules
-
-- Module 0.1 — Engineering Mindset
-- Module 0.2 — Git Foundations
-- Module 0.3 — Xcode Fundamentals
-- Module 0.4 — Documentation & Research
-- Module 0.5 — Debugging Basics
-- Module 0.6 — Engineering Notes
+- MVC
+- MVP
+- MVVM
+- VIPER
+- Clean Architecture
+- Coordinator Pattern
+- Dependency Injection
+- SOLID Principles
+- Design Patterns
+- Modularization
 
 ---
 
-# Phase 01 — Swift Mastery
+# 10. Persistence
 
-> Details: [`phase-01-swift-mastery.md`](./phase-01-swift-mastery.md)
-
-**Purpose:** Master the Swift language deeply before focusing on advanced frameworks. Build strong fundamentals that support every future phase.
-
-### Modules
-
-- Module 1 — Swift Basics
-- Module 2 — Collections & Optionals
-- Module 3 — Structs, Classes & Enums
-- Module 4 — Memory Management
-- Module 5 — Protocol-Oriented Programming
-- Module 6 — Generics
-- Module 7 — Error Handling
-- Module 8 — Concurrency
+- UserDefaults
+- FileManager
+- Keychain
+- SQLite
+- Core Data
+- SwiftData
+- Realm
 
 ---
 
-# Phase 02 — SwiftUI Mastery
+# 11. Networking
 
-> Details: [`phase-02-swiftui-mastery.md`](./phase-02-swiftui-mastery.md)
-
-**Purpose:** Learn SwiftUI by understanding how it works internally and how to build maintainable, production-quality user interfaces.
-
-### Modules
-
-- Module 1 — SwiftUI Fundamentals
-- Module 2 — Layout System
-- Module 3 — State Management
-- Module 4 — Navigation
-- Module 5 — Lists & Forms
-- Module 6 — Custom Components
-- Module 7 — Animation
-- Module 8 — Accessibility
-- Module 9 — Performance
-
----
-
-# Phase 03 — Apple Frameworks
-
-> Details: [`phase-03-apple-frameworks.md`](./phase-03-apple-frameworks.md)
-
-**Purpose:** Learn Apple's frameworks by solving real-world problems instead of studying APIs in isolation.
-
-### Modules
-
-- Module 1 — Foundation Framework
-- Module 2 — Persistence
-- Module 3 — Networking Foundation
-- Module 4 — Media Frameworks
-- Module 5 — Location & Maps
-- Module 6 — Notifications
-- Module 7 — Background Work
-- Module 8 — Widgets & App Intents
-- Module 9 — Cloud & Purchases
+- URLSession
+- HTTP
+- HTTPS
+- REST API
+- GraphQL
+- JSON
+- Codable
+- Authentication
+- Authorization
+- OAuth
+- JWT
+- Cookies
+- Sessions
+- Multipart Upload
+- Download
+- WebSockets
+- Retry
+- Pagination
+- Caching
+- Network Monitoring
 
 ---
 
-# Phase 04 — Professional App Architecture
+# 12. Security
 
-> Details: [`phase-04-professional-app-architecture.md`](./phase-04-professional-app-architecture.md)
-
-**Purpose:** Move from writing working code to designing maintainable systems.
-
-### Modules
-
-- Module 1 — Project Organization
-- Module 2 — MVVM
-- Module 3 — Dependency Injection
-- Module 4 — SOLID Principles
-- Module 5 — Clean Architecture
-- Module 6 — Modularization
-- Module 7 — Tuist
-- Module 8 — Architecture Decision Making
+- Keychain
+- Encryption
+- Hashing
+- Secure Enclave
+- Biometrics
+- Certificate Pinning
+- App Transport Security
+- Code Signing
 
 ---
 
-# Phase 05 — Networking & Data
+# 13. Testing
 
-> Details: [`phase-05-networking-and-data.md`](./phase-05-networking-and-data.md)
-
-**Purpose:** Learn how production iOS applications communicate with servers, store data, and provide a reliable user experience even without an internet connection.
-
-### Modules
-
-- Module 1 — Networking Fundamentals
-- Module 2 — URLSession
-- Module 3 — Codable & JSON
-- Module 4 — Error Handling
-- Module 5 — Authentication
-- Module 6 — Local Persistence
-- Module 7 — Caching & Offline-First
-- Module 8 — Repository Pattern
+- XCTest
+- Unit Testing
+- UI Testing
+- Integration Testing
+- Snapshot Testing
+- Performance Testing
+- Mocking
+- Test Doubles
+- Test-Driven Development (TDD)
 
 ---
 
-# Phase 06 — Testing
+# 14. Performance
 
-> Details: [`phase-06-testing.md`](./phase-06-testing.md)
-
-**Purpose:** Learn to build reliable, maintainable software through automated testing. Testing is a core engineering skill, not an afterthought.
-
-### Modules
-
-- Module 1 — Testing Fundamentals
-- Module 2 — Unit Testing
-- Module 3 — Test Doubles
-- Module 4 — Testable Architecture
-- Module 5 — Integration Testing
-- Module 6 — UI Testing
-- Module 7 — Test-Driven Development (TDD)
-- Module 8 — Snapshot & Performance Testing
+- Instruments
+- Time Profiler
+- Memory Graph
+- Leaks
+- Allocations
+- CPU Optimization
+- Memory Optimization
+- Rendering
+- Startup Time
+- Energy Usage
 
 ---
 
-# Phase 07 — Performance & Debugging
+# 15. Apple Frameworks
 
-> Details: [`phase-07-performance-and-debugging.md`](./phase-07-performance-and-debugging.md)
-
-**Purpose:** Learn to find, understand, and fix performance, memory, rendering, and runtime issues using professional engineering tools.
-
-### Modules
-
-- Module 1 — Debugging Mindset
-- Module 2 — Instruments
-- Module 3 — Memory Management
-- Module 4 — SwiftUI Performance
-- Module 5 — Performance Optimization
-- Module 6 — Crash Analysis
-
----
-
-# Phase 08 — Security
-
-> Details: [`phase-08-security.md`](./phase-08-security.md)
-
-**Purpose:** Learn to build secure iOS applications that protect user data, defend against common threats, and follow Apple's security recommendations.
-
-### Modules
-
-- Module 1 — Security Fundamentals
-- Module 2 — Secure Storage
-- Module 3 — Authentication & Authorization
-- Module 4 — Secure Networking
-- Module 5 — Privacy
-- Module 6 — Secure Coding
+- Foundation
+- SwiftUI
+- UIKit
+- Observation
+- Combine
+- Core Animation
+- Core Graphics
+- AVFoundation
+- Vision
+- Core ML
+- Core Image
+- Core Location
+- MapKit
+- WidgetKit
+- ActivityKit
+- App Intents
+- UserNotifications
+- Background Tasks
+- CloudKit
+- StoreKit
+- HealthKit
+- Photos Framework
 
 ---
 
-# Phase 09 — System Design
+# 16. Package Management
 
-> Details: [`phase-09-system-design.md`](./phase-09-system-design.md)
-
-**Purpose:** Learn to design software before writing code. This phase focuses on engineering decisions, trade-offs, scalability, and building systems that are easy to maintain and evolve.
-
-### Modules
-
-- Module 1 — System Design Fundamentals
-- Module 2 — Domain Modeling
-- Module 3 — Feature Design
-- Module 4 — API & Data Flow Design
-- Module 5 — Scalability & Modularity
-- Module 6 — Engineering Decision Making
+- Swift Package Manager
+- CocoaPods
+- Carthage
+- Binary Frameworks
 
 ---
 
-# Phase 10 — Production Engineering
+# 17. Project Structure
 
-> Details: [`phase-10-production-engineering.md`](./phase-10-production-engineering.md)
-
-**Purpose:** Learn everything required to build, ship, monitor, maintain, and continuously improve production-quality iOS applications.
-
-### Modules
-
-- Module 1 — Production Mindset
-- Module 2 — Build & Release
-- Module 3 — CI/CD
-- Module 4 — Analytics
-- Module 5 — Crash Reporting & Logging
-- Module 6 — Feature Flags & Configuration
-- Module 7 — Maintenance & Technical Debt
+- Tuist
+- Modular Architecture
+- Feature Modules
+- Shared Modules
+- Resource Management
+- Environment Management
+- Build Configurations
 
 ---
 
-# Phase 11 — Open Source & Code Reading
+# 18. Debugging
 
-> Details: [`phase-11-open-source-and-code-reading.md`](./phase-11-open-source-and-code-reading.md)
-
-**Purpose:** Learn how to understand, evaluate, contribute to, and maintain real-world codebases. Great engineers spend as much time reading code as writing it.
-
-### Modules
-
-- Module 1 — Reading Large Codebases
-- Module 2 — Code Reviews
-- Module 3 — Debugging Unfamiliar Projects
-- Module 4 — Contributing to Open Source
-- Module 5 — Maintaining Open Source
+- Breakpoints
+- Conditional Breakpoints
+- Symbolic Breakpoints
+- LLDB
+- Logging
+- Assertions
+- Memory Debugging
+- Crash Analysis
 
 ---
 
-# Phase 12 — Apple Ecosystem
+# 19. CI/CD
 
-> Details: [`phase-12-apple-ecosystem.md`](./phase-12-apple-ecosystem.md)
-
-**Purpose:** Expand beyond iPhone development and learn how to build applications across Apple's platforms while understanding shared technologies and platform-specific design principles.
-
-### Modules
-
-- Module 1 — Apple Ecosystem Overview
-- Module 2 — UIKit Interoperability
-- Module 3 — Widgets & App Intents
-- Module 4 — watchOS & visionOS
-- Module 5 — macOS & Catalyst
-- Module 6 — Multiplatform Engineering
+- Fastlane
+- GitHub Actions
+- Xcode Cloud
+- Bitrise
+- Build Automation
+- Automated Testing
+- Deployment
 
 ---
 
-# Phase 13 — Product & Business Engineering
+# 20. App Store
 
-> Details: [`phase-13-product-and-business-engineering.md`](./phase-13-product-and-business-engineering.md)
-
-**Purpose:** Transform your engineering skills into successful products by learning product thinking, business fundamentals, and long-term product management. This phase is about building products people want, shipping them professionally, and continuously improving them.
-
-### Modules
-
-- Module 1 — Product Thinking
-- Module 2 — MVP Planning
-- Module 3 — Shipping to the App Store
-- Module 4 — Analytics & User Feedback
-- Module 5 — Monetization
-- Module 6 — Marketing & Personal Brand
-- Module 7 — Long-Term Product Management
+- App Store Connect
+- TestFlight
+- Certificates
+- Provisioning Profiles
+- Privacy Manifest
+- App Review
+- App Analytics
+- In-App Purchases
+- Subscriptions
 
 ---
 
-# Book Strategy
+# 21. UI/UX Design
 
-Books are **not** read from cover to cover.
-
-Books are used as references.
-
-Read only the chapters that support the current module.
-
----
-
-# Official Resources
-
-Always prioritize learning in this order:
-
-1. Apple Documentation
-2. Swift Documentation
-3. WWDC
-4. Open Source Code
-5. Books
-6. Carefully Selected Videos
+- Apple Human Interface Guidelines
+- Typography
+- Color Theory
+- Layout
+- Spacing
+- SF Symbols
+- Icons
+- Dark Mode
+- Accessibility
 
 ---
 
-# Graduation Requirements
+# 22. System Design
 
-The roadmap is considered complete only when you can:
-
-- Design software before writing code.
-- Read unfamiliar production code confidently.
-- Debug problems independently.
-- Build complete production-quality applications.
-- Publish applications.
-- Contribute to open source.
-- Explain engineering decisions.
-- Learn new Apple technologies independently.
+- Scalability
+- Offline First
+- Caching
+- Synchronization
+- Repository Pattern
+- Dependency Graph
+- State Management
+- Background Processing
 
 ---
 
-# Final Goal
+# 23. Software Engineering
 
-The purpose of this roadmap is **not** to become someone who knows Swift.
+- Requirements Gathering
+- Planning
+- Estimation
+- Documentation
+- Code Review
+- Refactoring
+- Technical Debt
+- Agile
+- Scrum
+- Kanban
+- Release Management
+- Monitoring
+- Maintenance
 
-The purpose is to become an engineer capable of solving real-world problems, building valuable products, and continuously improving throughout an entire career.
+---
+
+# 24. Backend Knowledge
+
+- APIs
+- SQL
+- NoSQL
+- Databases
+- Authentication
+- Authorization
+- Server Architecture
+- Microservices
+- Webhooks
+
+---
+
+# 25. DevOps Basics
+
+- Linux
+- Docker
+- Nginx
+- Reverse Proxy
+- DNS
+- SSL
+- CDN
+- Cloud Storage
+
+---
+
+# 26. Product Engineering
+
+- Product Thinking
+- MVP
+- User Research
+- Analytics
+- A/B Testing
+- Feature Flags
+- Crash Reporting
+- Logging
+- Metrics
+
+---
+
+# 27. Business
+
+- App Store Optimization (ASO)
+- Marketing
+- Branding
+- Pricing
+- Subscription Models
+- Revenue Models
+- Customer Support
+
+---
+
+# 28. Soft Skills
+
+- Communication
+- Technical Writing
+- Mentoring
+- Leadership
+- Interview Skills
+- Time Management
+- Problem Solving
+
+---
+
+# Continuous Learning
+
+- Apple Documentation
+- WWDC Videos
+- Swift Evolution Proposals
+- Open Source Projects
+- Reverse Engineering Apps
+- Reading Source Code
+- Building Side Projects
+- Code Reviews
+- System Design Practice
+- DSA Practice
+
+
+
+
+# Module Connections Guide
+
+> **Purpose:** Software engineering is not linear. Every module depends on previous knowledge and unlocks future topics. Use this guide to understand how everything connects.
+
+---
+
+# Module 00 — Software Engineering Mindset
+
+### Depends On
+- Nothing
+
+### Unlocks
+- Every other module
+
+### Real-World Usage
+Everything you build starts with understanding the problem before writing code.
+
+---
+
+# Module 01 — Computer Science Fundamentals
+
+### Depends On
+- Module 00
+
+### Unlocks
+- Swift
+- Memory Management
+- Concurrency
+- Networking
+- Performance
+- System Design
+
+### Real-World Usage
+Understanding CPU, memory, networking, and algorithms helps explain why code behaves the way it does.
+
+---
+
+# Module 02 — Development Environment
+
+### Depends On
+- Module 01
+
+### Unlocks
+- Every coding module
+
+### Real-World Usage
+Git and Xcode become your daily tools. Every feature starts here.
+
+---
+
+# Module 03 — Swift Foundations
+
+### Depends On
+- Module 01
+- Module 02
+
+### Unlocks
+- Advanced Swift
+- SwiftUI
+- UIKit
+- Architecture
+
+### Real-World Usage
+Swift is the language used everywhere in your app.
+
+---
+
+# Module 04 — Advanced Swift
+
+### Depends On
+- Module 03
+
+### Unlocks
+- Architecture
+- SwiftUI
+- Modern API Design
+
+### Real-World Usage
+Generics, protocols, and result builders are heavily used in Apple's frameworks.
+
+---
+
+# Module 05 — Memory & Concurrency
+
+### Depends On
+- Module 03
+- Module 04
+
+### Unlocks
+- SwiftUI
+- Networking
+- Performance
+- Debugging
+
+### Real-World Usage
+Know where your code runs, avoid memory leaks, prevent data races, and update UI safely using `@MainActor`.
+
+---
+
+# Module 06 — SwiftUI
+
+### Depends On
+- Module 03
+- Module 04
+- Module 05
+
+### Unlocks
+- Real App Development
+- Apple Frameworks
+- Performance
+
+### Real-World Usage
+SwiftUI is where users interact with your application. State management depends on understanding memory and concurrency.
+
+---
+
+# Module 07 — UIKit
+
+### Depends On
+- Module 03
+- Module 05
+
+### Unlocks
+- Legacy Projects
+- UIKit Integration
+- Advanced UI
+
+### Real-World Usage
+Many production apps still contain UIKit.
+
+---
+
+# Module 08 — Architecture
+
+### Depends On
+- Module 03
+- Module 04
+- Module 05
+
+### Unlocks
+- Persistence
+- Networking
+- Testing
+- Modularization
+- System Design
+
+### Real-World Usage
+Architecture determines how easy your app is to maintain, test, and scale.
+
+---
+
+# Module 09 — Persistence
+
+### Depends On
+- Module 08
+
+### Unlocks
+- Offline Support
+- Caching
+- System Design
+
+### Real-World Usage
+Store user data, cache API responses, and support offline experiences.
+
+---
+
+# Module 10 — Networking
+
+### Depends On
+- Module 05
+- Module 08
+
+### Unlocks
+- Authentication
+- Cloud Features
+- System Design
+
+### Real-World Usage
+Networking should work together with persistence, security, concurrency, and architecture.
+
+---
+
+# Module 11 — Project Organization
+
+### Depends On
+- Module 08
+
+### Unlocks
+- Large Applications
+- Team Development
+- CI/CD
+
+### Real-World Usage
+Large apps are divided into modules for faster builds and better maintainability.
+
+---
+
+# Module 12 — Testing
+
+### Depends On
+- Module 08
+- Module 10
+- Module 11
+
+### Unlocks
+- CI/CD
+- Safe Refactoring
+
+### Real-World Usage
+Dependency Injection and clean architecture make testing simple and reliable.
+
+---
+
+# Module 13 — Debugging & Performance
+
+### Depends On
+- Module 05
+- Module 06
+- Module 10
+
+### Unlocks
+- Production Optimization
+
+### Real-World Usage
+Use Instruments, LLDB, and Memory Graph to diagnose and fix performance issues.
+
+---
+
+# Module 14 — Apple Frameworks
+
+### Depends On
+- Module 06
+- Module 08
+- Module 10
+
+### Unlocks
+- Advanced iOS Features
+
+### Real-World Usage
+Frameworks should integrate naturally into your app's architecture rather than being used in isolation.
+
+---
+
+# Module 15 — Security
+
+### Depends On
+- Module 09
+- Module 10
+
+### Unlocks
+- Production Apps
+
+### Real-World Usage
+Protect user data, secure API communication, and store sensitive information safely.
+
+---
+
+# Module 16 — Release
+
+### Depends On
+- Modules 00–15
+
+### Unlocks
+- App Store Distribution
+
+### Real-World Usage
+Prepare, sign, test, and publish production applications.
+
+---
+
+# Module 17 — CI/CD
+
+### Depends On
+- Module 11
+- Module 12
+- Module 16
+
+### Unlocks
+- Team Automation
+
+### Real-World Usage
+Automate builds, tests, and deployments for reliable releases.
+
+---
+
+# Module 18 — System Design
+
+### Depends On
+- Almost Every Previous Module
+
+### Unlocks
+- Senior Engineer Thinking
+
+### Real-World Usage
+System design combines architecture, networking, persistence, concurrency, performance, and security into scalable solutions.
+
+---
+
+# Module 19 — Backend Knowledge
+
+### Depends On
+- Module 10
+
+### Unlocks
+- Better API Design
+- Full-Stack Communication
+
+### Real-World Usage
+Understand how servers work to collaborate effectively with backend engineers.
+
+---
+
+# Module 20 — Product Engineering
+
+### Depends On
+- Module 16
+
+### Unlocks
+- Better Products
+
+### Real-World Usage
+Measure user behavior, analyze crashes, and improve features based on real-world data.
+
+---
+
+# Module 21 — Business
+
+### Depends On
+- Module 20
+
+### Unlocks
+- Sustainable Apps
+
+### Real-World Usage
+Learn how great products generate revenue and reach users.
+
+---
+
+# Module 22 — Leadership & Professional Growth
+
+### Depends On
+- All Previous Modules
+
+### Unlocks
+- Senior & Staff Engineer Skills
+
+### Real-World Usage
+Leadership is about multiplying the impact of your technical skills through communication, mentoring, and sound engineering practices.
