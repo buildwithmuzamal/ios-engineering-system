@@ -43,25 +43,135 @@
 ---
 
 # 02. Git
+- Git Fundamentals
+    - Version Control
+    - Repository
+    - Clone
+    - Commit
+    - Branch
+    - Merge
+    - Rebase
+    - Cherry Pick
+    - Reset
+    - Revert
+    - Stash
+    - Tag
+    - Remote
+    - Pull Request
+    - Conflict Resolution
+    - GitHub
+> ### Legend
+>
+> 🔴 **Must Know** — Essential for daily professional iOS development. Master these.
+>
+> 🟡 **Should Know** — Important topics you'll encounter regularly. Learn after the essentials.
+>
+> ⚪ **Nice to Have** — Advanced or specialized topics. Learn when the need arises or out of curiosity.
 
-- Version Control
-- Repository
-- Clone
-- Commit
-- Branch
-- Merge
-- Rebase
-- Cherry Pick
-- Reset
-- Revert
-- Stash
-- Tag
-- Remote
-- Pull Request
-- Conflict Resolution
-- GitHub
 
----
+# Advanced Git
+
+## Git Internals
+
+- 🔴 Git Object Model
+- 🔴 Blob
+- 🔴 Tree
+- 🔴 Commit Object
+- 🟡 Tag Object
+- 🟡 SHA-1 / SHA-256 Hashes
+- 🔴 HEAD
+- 🔴 Detached HEAD
+- 🔴 References (refs)
+- 🔴 Index (Staging Area)
+- 🔴 Working Tree
+
+
+## History Manipulation
+
+- 🔴 Interactive Rebase
+- 🔴 Squash
+- 🔴 Fixup
+- 🟡 Autosquash
+- 🔴 Reword
+- 🔴 Edit
+- 🔴 Drop
+- 🟡 Split Commits
+- 🔴 Rebase vs Merge (Deep Dive)
+- 🔴 Force Push vs `--force-with-lease`
+
+
+## Recovery
+
+- 🔴 Reflog
+- 🔴 Recover Lost Commits
+- 🟡 Recover Deleted Branches
+- 🔴 Recover After Hard Reset
+- 🔴 Recover After Bad Rebase
+
+
+## Investigation
+
+- 🔴 Git Bisect
+- 🟡 git blame
+- 🔴 git log (advanced)
+- 🟡 git show
+- 🔴 git diff (advanced)
+- ⚪ git range-diff
+
+
+## Branch Management
+
+- 🔴 Branch Strategies
+- ⚪ Git Flow
+- 🔴 GitHub Flow
+- 🔴 Trunk-Based Development
+- 🟡 Release Branches
+- 🟡 Hotfix Branches
+
+
+
+## Merge Strategies
+
+- 🔴 Fast Forward
+- 🔴 Three-Way Merge
+- 🔴 Squash Merge
+- 🔴 Rebase Merge
+- ⚪ Octopus Merge (overview)
+- 🟡 Ours/Theirs Strategy
+
+
+
+## Remote Collaboration
+
+- 🔴 Fetch vs Pull
+- 🔴 Upstream Branches
+- 🔴 Tracking Branches
+- 🟡 Fork Workflow
+- 🔴 Pull Request Best Practices
+- 🔴 Code Review Workflow
+
+
+
+## Large Projects
+
+- 🟡 Git Worktree
+- 🟡 Git Hooks
+- ⚪ Git LFS
+- ⚪ Sparse Checkout
+- ⚪ Submodules
+- ⚪ Subtree (overview)
+
+
+
+## Performance & Maintenance
+
+- ⚪ Garbage Collection
+- ⚪ Pack Files
+- ⚪ Pruning
+- ⚪ Repository Maintenance
+
+
+
 
 # 03. Xcode
 
