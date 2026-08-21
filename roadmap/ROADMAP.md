@@ -175,24 +175,116 @@
 
 # 03. Xcode
 
+### 🟢 Xcode Fundamentals
+- Xcode Interface & Navigation
 - Workspace
 - Project
 - Target
 - Scheme
-- Build System
+- Project Navigator
+- Target Membership
+
+### 🔴 Project Structure
+- Build Phases
+- Build Rules
+- Target Dependencies
+- Project vs Target Settings
+- `.xcodeproj`
+- `.xcworkspace`
+
+### 🔴 Build Fundamentals
+- Xcode Build System
+- Build Process
+- Compile
+- Link
+- Build Products
+- Derived Data
+- Clean Build Folder
+- Incremental Builds
+- Build Logs
+
+### 🔴 Build Configurations
 - Build Configurations
+- Debug vs Release
 - Build Settings
+- `.xcconfig`
+- User-Defined Build Settings
+- Environment Variables
+- Build Settings Inheritance
+
+### 🔴 App Configuration
 - Info.plist
-- Signing
-- Provisioning Profiles
+- Bundle Identifier
+- Version
+- Build Number
+- Entitlements
+- Capabilities
+
+### 🔴 Code Signing Fundamentals
+- Code Signing
 - Certificates
+- Provisioning Profiles
+- Automatic Signing
+- Manual Signing
+- Team
+- App ID
+- Signing Identity
+
+### 🟡 Devices & Simulator
 - Simulator
+- Physical Devices
+- Device Management
+- Running on a Physical Device
+- Device Logs
+- Console
+
+### 🔴 Basic Debugging
 - Debugger
-- LLDB
-- Instruments
-- Swift Package Manager
+- Breakpoints
+- Conditional Breakpoints
+- Step Over
+- Step Into
+- Step Out
+- Continue
+- Variables
+- Call Stack
+- Debug Console
+- Debug View Hierarchy
+- Memory Graph Debugger
+
+### 🟡 Swift Package Manager
+- Package Dependencies
+- Package Resolution
+- `Package.swift`
+- `Package.resolved`
+- Local Packages
+- Remote Packages
+
+### 🟡 Source Control in Xcode
+- Git Integration
+- Source Control Navigator
+- Diff
+- Commit
+- Branch
+- Merge
+- Conflict Resolution
+
+### 🟡 Xcode Developer Tools
+- Quick Help
+- Jump to Definition
+- Find References
+- Find in Workspace
+- Code Completion
+- Refactoring
+- Documentation
+- Code Snippets
+- Assistant Editor
+
+### 🟡 Archive Basics
 - Archive
-- Distribution
+- Organizer
+- Build for Distribution
+- Archive vs Build
 
 ---
 
