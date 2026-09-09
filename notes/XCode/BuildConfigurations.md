@@ -1291,3 +1291,1509 @@ Debug Build Problems
 You should be able to explain:
 
 When I press ⌘B, Xcode's build system determines what needs to be built, compiles my source code, links the compiled pieces and dependencies, processes resources, creates the application bundle/build products, and records the work in build logs. Xcode can reuse previous results through incremental builds, while Derived Data stores generated information used during development.
+
+
+
+# Xcode — Phase 2: Build Configurations
+
+## Phase Goal
+
+Understand how Xcode controls different types of builds and how Build Settings are configured, inherited, and provided to the application.
+
+---
+
+# 1. Build Configurations
+
+## What is a Build Configuration?
+
+A **Build Configuration** is a named collection of Build Settings that tells Xcode how to build the project.
+
+The two standard configurations are:
+
+* Debug
+* Release
+
+Example:
+
+```text
+Debug
+Release
+```
+
+A configuration contains many settings such as:
+
+```text
+Optimization
+Swift settings
+Code signing
+Bundle identifier
+Deployment target
+Compilation conditions
+```
+
+### Mental Model
+
+```text
+Build Configuration
+        ↓
+Collection of Build Settings
+        ↓
+Tells Xcode how to build
+```
+
+---
+
+## Configuration vs Setting
+
+These are different concepts.
+
+### Configuration
+
+A collection of settings:
+
+```text
+Debug
+Release
+```
+
+### Build Setting
+
+One individual setting:
+
+```text
+SWIFT_VERSION = 6.0
+```
+
+Think:
+
+```text
+Configuration
+    ↓
+contains
+    ↓
+Build Settings
+```
+
+---
+
+## Scheme vs Build Configuration
+
+A **Scheme** controls the workflow/actions Xcode performs.
+
+A **Build Configuration** controls the settings used when building.
+
+Example:
+
+```text
+MyApp Scheme
+
+Run       → Debug
+Test      → Debug
+Profile   → Release
+Archive   → Release
+```
+
+So:
+
+```text
+Scheme
+  ↓
+chooses configuration for an action
+  ↓
+Build Configuration
+  ↓
+Build Settings
+```
+
+### Important
+
+Do not confuse:
+
+```text
+Debug / Release
+```
+
+with:
+
+```text
+Simulator / Device
+```
+
+They are different concepts.
+
+```text
+Debug / Release
+    ↓
+Build Configuration
+
+Simulator / Device
+    ↓
+Build Destination
+```
+
+Debug can run on a physical device.
+
+Release can also be built for a Simulator.
+
+---
+
+# 2. Debug vs Release
+
+## Debug
+
+Debug builds are generally designed for development and debugging.
+
+Typical goals:
+
+* Easier debugging
+* Useful debug information
+* Less optimization
+* Development-oriented behavior
+
+Example:
+
+```text
+Debug
+   ↓
+Optimization is generally lower
+   ↓
+Debugging is easier
+```
+
+---
+
+## Release
+
+Release builds are generally designed for production-oriented builds.
+
+Typical goals:
+
+* Optimization
+* Performance
+* Smaller/more production-oriented output
+* Less development-oriented behavior
+
+Example:
+
+```text
+Release
+   ↓
+More optimization
+   ↓
+Production-oriented build
+```
+
+---
+
+## Important: Debug does NOT mean Simulator
+
+Incorrect:
+
+```text
+Debug = Simulator
+Release = Device
+```
+
+Correct:
+
+```text
+Debug / Release
+    ↓
+Build Configuration
+
+Simulator / Device
+    ↓
+Destination
+```
+
+You can build:
+
+```text
+Debug + Device
+Debug + Simulator
+
+Release + Device
+Release + Simulator
+```
+
+---
+
+## Debug vs Release API
+
+Debug does not automatically mean development API.
+
+You have to configure that yourself.
+
+For example:
+
+```text
+Debug
+    API_URL = https://dev.example.com
+
+Release
+    API_URL = https://api.example.com
+```
+
+---
+
+## Debug vs Release Summary
+
+| Debug                    | Release                    |
+| ------------------------ | -------------------------- |
+| Development              | Production-oriented        |
+| Better debugging         | More optimization          |
+| Generally less optimized | Generally more optimized   |
+| Useful debug information | Production-oriented output |
+
+---
+
+# 3. Build Settings
+
+## What are Build Settings?
+
+**Build Settings are individual options that tell Xcode how to build your app.**
+
+Example:
+
+```text
+SWIFT_VERSION = 6.0
+PRODUCT_BUNDLE_IDENTIFIER = com.example.MyApp
+IPHONEOS_DEPLOYMENT_TARGET = 18.0
+```
+
+Mental model:
+
+```text
+Build Configuration
+        ↓
+Build Settings
+        ↓
+Build System
+        ↓
+Compile / Link / Package / Sign
+        ↓
+Final App
+```
+
+---
+
+## Build Setting = Key + Value
+
+The basic format is:
+
+```text
+SETTING_NAME = VALUE
+```
+
+Example:
+
+```text
+PRODUCT_BUNDLE_IDENTIFIER = com.example.MyApp
+```
+
+Here:
+
+```text
+PRODUCT_BUNDLE_IDENTIFIER
+        ↓
+Key / Setting
+
+com.example.MyApp
+        ↓
+Value
+```
+
+---
+
+## Where are Build Settings?
+
+In Xcode:
+
+```text
+Project Navigator
+    ↓
+Select Project
+    ↓
+Select Target
+    ↓
+Build Settings
+```
+
+---
+
+## Important Build Settings
+
+### PRODUCT_BUNDLE_IDENTIFIER
+
+Uniquely identifies your app.
+
+Example:
+
+```text
+com.buildwithmuzamal.HabitReturn
+```
+
+---
+
+### IPHONEOS_DEPLOYMENT_TARGET
+
+Defines the minimum iOS version supported by the app.
+
+Example:
+
+```text
+IPHONEOS_DEPLOYMENT_TARGET = 18.0
+```
+
+Meaning:
+
+```text
+iOS 18.0+ → Supported
+iOS 17.x  → Not supported
+```
+
+---
+
+### SWIFT_OPTIMIZATION_LEVEL
+
+Controls Swift optimization.
+
+Common values include:
+
+```text
+-Onone
+-O
+```
+
+Conceptually:
+
+```text
+Debug
+    ↓
+Generally less optimization
+    ↓
+Better debugging
+
+Release
+    ↓
+Generally more optimization
+    ↓
+Better production performance
+```
+
+---
+
+### SWIFT_ACTIVE_COMPILATION_CONDITIONS
+
+Defines compilation conditions.
+
+Example:
+
+```text
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG
+```
+
+Swift:
+
+```swift
+#if DEBUG
+print("Debug build")
+#endif
+```
+
+You can also define your own:
+
+```text
+STAGING
+```
+
+Then:
+
+```swift
+#if STAGING
+// Staging-specific code
+#endif
+```
+
+---
+
+### CODE_SIGN_STYLE
+
+Controls the code-signing approach.
+
+Common values:
+
+```text
+Automatic
+Manual
+```
+
+Signing will be studied more deeply later.
+
+---
+
+### DEVELOPMENT_TEAM
+
+Specifies the Apple Developer Team used for signing.
+
+This becomes important for:
+
+* Physical devices
+* Certificates
+* Provisioning Profiles
+* Distribution
+
+---
+
+# 4. `.xcconfig`
+
+## What is an `.xcconfig` file?
+
+An `.xcconfig` file is a **text file containing Xcode Build Settings**.
+
+Instead of managing everything through the Xcode UI:
+
+```text
+Build Settings
+    ↓
+Setting = Value
+```
+
+you can write:
+
+```text
+SWIFT_VERSION = 6.0
+IPHONEOS_DEPLOYMENT_TARGET = 18.0
+PRODUCT_BUNDLE_IDENTIFIER = com.example.MyApp
+```
+
+Mental model:
+
+```text
+.xcconfig
+    ↓
+Build Settings
+    ↓
+Xcode Build System
+```
+
+---
+
+## Why use `.xcconfig`?
+
+As a project grows, Build Settings can become difficult to manage through the Xcode UI.
+
+`.xcconfig` files make configuration:
+
+* Easier to read
+* Easier to review
+* Easier to version-control
+* Easier to compare
+* Easier to share between targets
+
+---
+
+## `.xcconfig` does NOT replace Build Configurations
+
+For example:
+
+```text
+Debug
+Release
+```
+
+are Build Configurations.
+
+You can associate them with:
+
+```text
+Debug.xcconfig
+Release.xcconfig
+```
+
+Conceptually:
+
+```text
+Debug Configuration
+        ↓
+Debug.xcconfig
+
+Release Configuration
+        ↓
+Release.xcconfig
+```
+
+---
+
+## Example
+
+### Debug.xcconfig
+
+```text
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG
+```
+
+### Release.xcconfig
+
+```text
+SWIFT_OPTIMIZATION_LEVEL = -O
+```
+
+---
+
+## `.xcconfig` and Environments
+
+A project might have:
+
+```text
+Development
+Staging
+Production
+```
+
+You could have:
+
+```text
+Debug.xcconfig
+Staging.xcconfig
+Release.xcconfig
+```
+
+For example:
+
+### Debug.xcconfig
+
+```text
+API_BASE_URL = https://dev.example.com
+```
+
+### Staging.xcconfig
+
+```text
+API_BASE_URL = https://staging.example.com
+```
+
+### Release.xcconfig
+
+```text
+API_BASE_URL = https://api.example.com
+```
+
+Conceptually:
+
+```text
+Debug
+    ↓
+Development API
+
+Staging
+    ↓
+Staging API
+
+Release
+    ↓
+Production API
+```
+
+---
+
+## `.xcconfig` and Git
+
+`.xcconfig` files are plain text.
+
+Therefore Git can easily show changes.
+
+Example:
+
+```diff
+- IPHONEOS_DEPLOYMENT_TARGET = 17.0
++ IPHONEOS_DEPLOYMENT_TARGET = 18.0
+```
+
+This makes configuration changes easy to review.
+
+---
+
+## Build Setting Expansion
+
+You can reference another Build Setting using:
+
+```text
+$(SETTING_NAME)
+```
+
+Example:
+
+```text
+PRODUCT_NAME = MyApp
+PRODUCT_BUNDLE_IDENTIFIER = com.company.$(PRODUCT_NAME)
+```
+
+Conceptually:
+
+```text
+$(PRODUCT_NAME)
+        ↓
+MyApp
+```
+
+So:
+
+```text
+com.company.$(PRODUCT_NAME)
+```
+
+becomes:
+
+```text
+com.company.MyApp
+```
+
+This is called **Build Setting Expansion**.
+
+---
+
+## Important
+
+Creating an `.xcconfig` file does not automatically mean Xcode uses it.
+
+You need to associate the file with the appropriate Build Configuration.
+
+Conceptually:
+
+```text
+Debug
+    ↓
+Debug.xcconfig
+
+Release
+    ↓
+Release.xcconfig
+```
+
+---
+
+# 5. User-Defined Build Settings
+
+## What are User-Defined Build Settings?
+
+Xcode provides many built-in Build Settings.
+
+For example:
+
+```text
+SWIFT_VERSION
+PRODUCT_BUNDLE_IDENTIFIER
+IPHONEOS_DEPLOYMENT_TARGET
+```
+
+You can also create your own.
+
+Examples:
+
+```text
+API_BASE_URL
+APP_ENVIRONMENT
+FEATURE_X_ENABLED
+APP_NAME
+```
+
+These are called **User-Defined Build Settings**.
+
+---
+
+## Why create them?
+
+Suppose your application has:
+
+```text
+Development
+Staging
+Production
+```
+
+You can create:
+
+```text
+API_BASE_URL
+```
+
+with different values:
+
+```text
+Debug:
+API_BASE_URL = https://dev.example.com
+
+Release:
+API_BASE_URL = https://api.example.com
+```
+
+Now the Build Configuration determines which value is used.
+
+---
+
+## Example
+
+Create:
+
+```text
+APP_ENVIRONMENT
+```
+
+Then:
+
+```text
+Debug   → Development
+Release → Production
+```
+
+And:
+
+```text
+API_BASE_URL
+```
+
+Then:
+
+```text
+Debug   → https://dev.example.com
+Release → https://api.example.com
+```
+
+Conceptually:
+
+```text
+Debug
+    ↓
+Development
+    ↓
+Development API
+```
+
+```text
+Release
+    ↓
+Production
+    ↓
+Production API
+```
+
+---
+
+## User-Defined Build Settings + `.xcconfig`
+
+Instead of putting values directly in Xcode's Build Settings UI, you can put them into `.xcconfig`.
+
+### Debug.xcconfig
+
+```text
+API_BASE_URL = https://dev.example.com
+APP_ENVIRONMENT = Development
+```
+
+### Release.xcconfig
+
+```text
+API_BASE_URL = https://api.example.com
+APP_ENVIRONMENT = Production
+```
+
+This creates a clean configuration system.
+
+---
+
+## Important: Don't store secrets
+
+Do NOT assume `.xcconfig` or User-Defined Build Settings are a secure place for secrets.
+
+Avoid:
+
+```text
+API_SECRET = super-secret-key
+DATABASE_PASSWORD = password123
+```
+
+Anything shipped inside an iOS application should be considered potentially extractable.
+
+Use an appropriate secure backend/secret-management architecture instead.
+
+---
+
+# 6. Environment Variables
+
+## What is an Environment Variable?
+
+An Environment Variable is a key-value pair provided to a **running process**.
+
+Example:
+
+```text
+API_BASE_URL = https://dev.example.com
+```
+
+Mental model:
+
+```text
+Environment Variable
+        ↓
+Running Process
+        ↓
+App
+```
+
+---
+
+## Where do you configure Environment Variables?
+
+Usually through the Scheme.
+
+In Xcode:
+
+```text
+Product
+    ↓
+Scheme
+    ↓
+Edit Scheme
+    ↓
+Run
+    ↓
+Arguments
+    ↓
+Environment Variables
+```
+
+Example:
+
+```text
+MY_TEST_VARIABLE = HelloXcode
+```
+
+---
+
+## Reading Environment Variables in Swift
+
+Swift can read them using `ProcessInfo`.
+
+Example:
+
+```swift
+let value = ProcessInfo.processInfo.environment["MY_TEST_VARIABLE"]
+```
+
+Conceptually:
+
+```text
+Xcode Scheme
+      ↓
+Environment Variable
+      ↓
+Running Process
+      ↓
+ProcessInfo
+      ↓
+Swift
+```
+
+---
+
+## Build Setting vs Environment Variable
+
+This is one of the most important distinctions.
+
+### Build Setting
+
+Primarily used during the **build process**.
+
+```text
+Build Setting
+    ↓
+Build Time
+```
+
+### Environment Variable
+
+Provided to the **running process**.
+
+```text
+Environment Variable
+    ↓
+Runtime
+```
+
+Simple mental model:
+
+```text
+Build Setting
+    ↓
+BUILD TIME
+```
+
+```text
+Environment Variable
+    ↓
+RUNTIME
+```
+
+---
+
+## Scheme and Environment Variables
+
+A Scheme can control:
+
+```text
+Run
+Test
+Profile
+Archive
+```
+
+For example:
+
+```text
+MyApp Scheme
+    │
+    ├── Run
+    │     ├── Configuration → Debug
+    │     └── Environment Variables
+    │
+    └── Archive
+          └── Configuration → Release
+```
+
+Environment Variables configured under Run are available when Xcode launches the application for that action.
+
+---
+
+## Environment Variables are NOT automatically secure
+
+Don't assume:
+
+```text
+API_SECRET = secret
+```
+
+is secure simply because it is an Environment Variable.
+
+If a secret needs to exist inside the app at runtime, it may potentially be extracted.
+
+---
+
+# 7. Build Settings Inheritance
+
+## What is Inheritance?
+
+Inheritance means a lower-level configuration can receive a value from a higher-level configuration.
+
+Basic example:
+
+```text
+Project
+   ↓
+Target
+```
+
+If the Project defines:
+
+```text
+SWIFT_VERSION = 6.0
+```
+
+and the Target doesn't define another value, the Target can inherit:
+
+```text
+SWIFT_VERSION = 6.0
+```
+
+Mental model:
+
+```text
+Project Setting
+      ↓
+    inherit
+      ↓
+Target
+```
+
+---
+
+## Target Can Override the Project
+
+Project:
+
+```text
+IPHONEOS_DEPLOYMENT_TARGET = 18.0
+```
+
+Target:
+
+```text
+IPHONEOS_DEPLOYMENT_TARGET = 19.0
+```
+
+The Target's value is more specific, so it can override the Project value.
+
+Conceptually:
+
+```text
+Project
+18.0
+  ↓
+Target
+19.0  ← override
+```
+
+Effective value:
+
+```text
+19.0
+```
+
+---
+
+## `.xcconfig` and Inheritance
+
+Suppose:
+
+```text
+Debug.xcconfig
+
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+```
+
+The Debug configuration uses that `.xcconfig`.
+
+The Target can inherit the value.
+
+Conceptually:
+
+```text
+Debug
+  ↓
+Debug.xcconfig
+  ↓
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+  ↓
+Target inherits
+```
+
+---
+
+## Target Override
+
+Suppose:
+
+### `.xcconfig`
+
+```text
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+```
+
+But Target says:
+
+```text
+SWIFT_OPTIMIZATION_LEVEL = -O
+```
+
+Then the Target can override the inherited value.
+
+```text
+.xcconfig
+-Onone
+   ↓
+Target
+-O  ← override
+```
+
+Effective value:
+
+```text
+-O
+```
+
+---
+
+# `$(inherited)`
+
+One of the most important inheritance concepts is:
+
+```text
+$(inherited)
+```
+
+It means:
+
+> Keep the value inherited from the parent and add to it.
+
+Example:
+
+Parent:
+
+```text
+-DDEBUG
+```
+
+Child:
+
+```text
+$(inherited) -DTESTING
+```
+
+Result:
+
+```text
+-DDEBUG -DTESTING
+```
+
+Mental model:
+
+```text
+Parent
+   ↓
+-DDEBUG
+   ↓
+$(inherited)
+   ↓
+-DDEBUG -DTESTING
+```
+
+---
+
+## Why is `$(inherited)` useful?
+
+It's especially useful for settings containing lists of values.
+
+Without preserving inheritance, a child value may replace the parent's value.
+
+With:
+
+```text
+$(inherited) -DTESTING
+```
+
+you are saying:
+
+```text
+Keep parent's values
++
+Add my values
+```
+
+---
+
+## Don't blindly use `$(inherited)`
+
+Not every setting should be combined.
+
+For a setting such as:
+
+```text
+PRODUCT_BUNDLE_IDENTIFIER
+```
+
+you normally want one final value.
+
+You don't want:
+
+```text
+Parent value + Child value
+```
+
+For list-type settings, inheritance can be useful.
+
+Always understand what the particular Build Setting represents.
+
+---
+
+# Effective Value
+
+The **effective value** is the value Xcode ultimately uses for the build after resolving all the relevant settings.
+
+For example:
+
+```text
+Project:
+SWIFT_VERSION = 6.0
+```
+
+Target:
+
+```text
+No override
+```
+
+Effective value:
+
+```text
+6.0
+```
+
+But:
+
+```text
+Project:
+SWIFT_VERSION = 6.0
+
+Target:
+SWIFT_VERSION = different value
+```
+
+The Target's value can become the effective value.
+
+When debugging configuration problems, ask:
+
+> **What is the effective value Xcode is actually using?**
+
+This is more useful than only asking:
+
+> Where did I enter the value?
+
+---
+
+# Complete Build Settings Hierarchy
+
+A simplified mental model:
+
+```text
+Project
+   ↓
+Build Configuration
+   ↓
+.xcconfig
+   ↓
+Build Settings
+   ↓
+Target
+   ↓
+Overrides / Inheritance
+   ↓
+Effective Value
+   ↓
+Build System
+   ↓
+Final Build Product
+```
+
+The exact resolution can involve several layers, but the key principle is:
+
+> More specific settings can override inherited/general settings.
+
+---
+
+# Complete Phase 2 Mental Model
+
+Put everything together:
+
+```text
+                    Build Configuration
+                    /              \
+                 Debug            Release
+                   ↓                 ↓
+           Debug.xcconfig     Release.xcconfig
+                   ↓                 ↓
+             Build Settings     Build Settings
+                   ↓                 ↓
+                  Target inherits / overrides
+                   ↓
+              Effective Values
+                   ↓
+               Build System
+                   ↓
+                Final App
+```
+
+Environment Variables are a separate mechanism:
+
+```text
+Scheme
+  ↓
+Environment Variables
+  ↓
+Running Process
+  ↓
+App Runtime
+```
+
+---
+
+# Key Differences
+
+| Concept              | What it is                      | Main purpose                      |
+| -------------------- | ------------------------------- | --------------------------------- |
+| Build Configuration  | Collection of settings          | Define a type of build            |
+| Debug                | Build Configuration             | Development/debugging             |
+| Release              | Build Configuration             | Production-oriented build         |
+| Build Setting        | Individual key/value            | Control the build                 |
+| `.xcconfig`          | Text configuration file         | Manage Build Settings             |
+| User-Defined Setting | Setting created by you          | Custom build configuration        |
+| Environment Variable | Runtime key/value               | Provide values to running process |
+| Inheritance          | Passing settings between levels | Avoid unnecessary duplication     |
+| `$(inherited)`       | Preserve inherited value        | Extend inherited list values      |
+| Effective Value      | Final value Xcode uses          | Understand actual configuration   |
+
+---
+
+# Practical Exercises
+
+## Exercise 1 — Build Settings
+
+Open:
+
+```text
+Project
+→ Target
+→ Build Settings
+```
+
+Find:
+
+```text
+PRODUCT_BUNDLE_IDENTIFIER
+IPHONEOS_DEPLOYMENT_TARGET
+SWIFT_OPTIMIZATION_LEVEL
+SWIFT_ACTIVE_COMPILATION_CONDITIONS
+CODE_SIGN_STYLE
+```
+
+Compare:
+
+```text
+Debug
+Release
+```
+
+---
+
+## Exercise 2 — `.xcconfig`
+
+Create:
+
+```text
+Debug.xcconfig
+Release.xcconfig
+```
+
+Example:
+
+### Debug.xcconfig
+
+```text
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG
+```
+
+### Release.xcconfig
+
+```text
+SWIFT_OPTIMIZATION_LEVEL = -O
+```
+
+Associate them with the appropriate configurations.
+
+---
+
+## Exercise 3 — User-Defined Build Settings
+
+Create:
+
+```text
+APP_ENVIRONMENT
+API_BASE_URL
+```
+
+Example:
+
+```text
+Debug:
+APP_ENVIRONMENT = Development
+API_BASE_URL = https://dev.example.com
+
+Release:
+APP_ENVIRONMENT = Production
+API_BASE_URL = https://api.example.com
+```
+
+---
+
+## Exercise 4 — Environment Variable
+
+Go to:
+
+```text
+Product
+→ Scheme
+→ Edit Scheme
+→ Run
+→ Arguments
+→ Environment Variables
+```
+
+Add:
+
+```text
+MY_TEST_VARIABLE = HelloXcode
+```
+
+Read it:
+
+```swift
+let value = ProcessInfo.processInfo.environment["MY_TEST_VARIABLE"]
+
+print(value ?? "Not found")
+```
+
+Run the app.
+
+You should see:
+
+```text
+HelloXcode
+```
+
+Disable the variable and run again.
+
+You should see:
+
+```text
+Not found
+```
+
+---
+
+## Exercise 5 — Understand Inheritance
+
+Look at Build Settings at the:
+
+```text
+Project
+Target
+Configuration
+```
+
+levels.
+
+Ask:
+
+1. Where is this setting defined?
+2. Is the Target inheriting it?
+3. Is the Target overriding it?
+4. What is the effective value?
+
+---
+
+# Phase 2 Completion Checklist
+
+* [x] Build Configurations
+* [x] Debug vs Release
+* [x] Build Settings
+* [x] `.xcconfig`
+* [x] User-Defined Build Settings
+* [x] Environment Variables
+* [x] Build Settings Inheritance
+
+---
+
+# Core Knowledge
+
+I should now understand that a **Build Configuration** is a collection of Build Settings. Debug and Release are common configurations with different goals. Build Settings control how Xcode builds the application. `.xcconfig` files provide a text-based way to manage those settings. User-Defined Build Settings allow me to create my own configuration values. Environment Variables provide values to a running process, while Build Settings primarily affect the build. Build Settings can be inherited from higher levels and overridden by more specific settings, and `$(inherited)` can be used to preserve inherited values when extending list-type settings. The final value Xcode actually uses is the **effective value**.
